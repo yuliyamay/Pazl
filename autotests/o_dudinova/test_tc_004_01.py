@@ -59,4 +59,5 @@ def test_sorting_items(sort_locator, items_locator, reverse_flag, browser):
         products_code_sort = [x.replace('$', '') for x in products_code_sort]
         products_code_sort = [float(x) for x in products_code_sort]
     products_code_sort.sort(reverse=reverse_flag)
+    print("1")
     assert products_code_sort == products_after_page_sort, "Products are not sorted!"
