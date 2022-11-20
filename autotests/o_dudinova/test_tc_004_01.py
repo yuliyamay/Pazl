@@ -1,7 +1,5 @@
 import pytest
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
 
 test_params = (
     pytest.param(
@@ -32,28 +30,26 @@ test_params = (
 
 
 @pytest.mark.parametrize("sort_locator, items_locator, reverse_flag", test_params)
-def test_sorting_items(sort_locator, items_locator, reverse_flag):
-    driver = webdriver.Chrome(ChromeDriverManager().install())
-    driver.get('https://www.saucedemo.com')
-    user_name = driver.find_element(By.ID, 'user-name')
+def test_sorting_items(sort_locator, items_locator, reverse_flag, browser):
+    user_name = browser.find_element(By.ID, 'user-name')
     user_name.send_keys('standard_user')
 
-    password = driver.find_element(By.ID, 'password')
+    password = browser.find_element(By.ID, 'password')
     password.send_keys('secret_sauce')
 
-    button_login = driver.find_element(By.NAME, 'login-button')
+    button_login = browser.find_element(By.NAME, 'login-button')
     button_login.click()
 
-    assert driver.current_url == 'https://www.saucedemo.com/inventory.html', "We reach!"
-    list_of_product_elements = driver.find_elements(By.CSS_SELECTOR, items_locator)
+    assert browser.current_url == 'https://www.saucedemo.com/inventory.html', "We reach!"
+    list_of_product_elements = browser.find_elements(By.CSS_SELECTOR, items_locator)
     products_code_sort = []
     for item in list_of_product_elements:
         products_code_sort.append(item.text)
-    product_sort_container = driver.find_element(By.XPATH, '//select[@class="product_sort_container"]')
+    product_sort_container = browser.find_element(By.XPATH, '//select[@class="product_sort_container"]')
     product_sort_container.click()
-    dropdawn_sorting = driver.find_element(By.XPATH, sort_locator)
+    dropdawn_sorting = browser.find_element(By.XPATH, sort_locator)
     dropdawn_sorting.click()
-    list_of_product_elements_after_page_sort = driver.find_elements(By.CSS_SELECTOR, items_locator)
+    list_of_product_elements_after_page_sort = browser.find_elements(By.CSS_SELECTOR, items_locator)
     products_after_page_sort = []
     for product in list_of_product_elements_after_page_sort:
         products_after_page_sort.append(product.text)
