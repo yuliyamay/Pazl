@@ -7,6 +7,7 @@ password = "secret_sauce"
 invalid_user = "invalid"
 invalid_password = "invalid"
 
+
 @pytest.mark.smoke
 def test_login_valid_user(browser):
     driver = LoginPage(browser, link)
@@ -30,7 +31,7 @@ def test_login_without_password(browser):
 
 
 @pytest.mark.TC001_01
-def test_password_invalid_username(browser):
+def test_login_invalid_username(browser):
     driver = LoginPage(browser, link)
     driver.open_main_page()
     driver.enter_user_name(invalid_user)
@@ -38,12 +39,12 @@ def test_password_invalid_username(browser):
     driver.click_login_button()
     error_text = driver.getting_error_text()
     assert (
-        error_text == "Epic sadface: Username and password do not match any user in this service"
-    ), "wrong warning text"
+        error_text == "Epic sadface: Username and password do not "
+                      "match any user in this service"), "wrong warning text"
 
 
 @pytest.mark.TC001_03
-def test_password_empty_fields(browser):
+def test_login_empty_fields(browser):
     driver = LoginPage(browser, link)
     driver.open_main_page()
     driver.click_login_button()

@@ -4,6 +4,7 @@ from pages.locators import LoginPageLocators
 
 link = "https://www.saucedemo.com/"
 
+
 class LoginPage(BasePage):
 
     def open_main_page(self):
