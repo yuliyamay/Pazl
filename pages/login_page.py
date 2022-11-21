@@ -3,9 +3,6 @@ from pages.base_page import BasePage
 from pages.locators import LoginPageLocators
 
 link = "https://www.saucedemo.com/"
-regular_user = "standard_user"
-password = "secret_sauce"
-
 
 class LoginPage(BasePage):
 
@@ -13,10 +10,10 @@ class LoginPage(BasePage):
         self.open_page()
         self.should_be_current_page(link)
 
-    def enter_user_name(self):
-        self.keyboard_input(*LoginPageLocators.LOGIN_USER, regular_user)
+    def enter_user_name(self, username):
+        self.keyboard_input(*LoginPageLocators.LOGIN_USER, username)
 
-    def enter_user_password(self):
+    def enter_user_password(self, password):
         self.keyboard_input(*LoginPageLocators.LOGIN_PASSWORD, password)
 
     def click_login_button(self):
@@ -26,3 +23,5 @@ class LoginPage(BasePage):
         elem = self.browser.find_element(*LoginPageLocators.ERROR_WARNING)
         text = elem.text
         return text
+
+
