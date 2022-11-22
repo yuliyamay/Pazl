@@ -80,6 +80,16 @@ def test_open_facebook_page(browser):
     time.sleep(3)
     driver.should_be_current_page('https://www.facebook.com/saucelabs')
 
+@pytest.mark.TC_001_02
+def test_login_with_invalid_password(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    driver.enter_user_name(regular_user)
+    driver.enter_user_password(invalid_password)
+    driver.click_login_button()
+    error_text = driver.getting_error_text()
+    assert error_text == "Epic sadface: Username and password do not match any user in this service", "wrong warning text"
+
 
 
 
