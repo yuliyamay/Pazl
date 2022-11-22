@@ -68,6 +68,20 @@ def test_fourth_item_back_to_product(browser):
     driver.click_element(*FourthItemPageLocators.BACK_TO_PRODUCTS_BUTTON_FOURTH_ITEM)
     driver.should_be_current_page('https://www.saucedemo.com/inventory.html')
 
+@pytest.mark.TC_003_05
+@pytest.mark.xfail
+def test_open_facebook_page(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    driver.enter_user_name(regular_user)
+    driver.enter_user_password(password)
+    driver.click_login_button()
+    driver.click_element(*InventoryPageLocators.FACEBOOK_IMAGE_LINK)
+    time.sleep(3)
+    driver.should_be_current_page('https://www.facebook.com/saucelabs')
+
+
+
 
 
 
