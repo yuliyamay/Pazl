@@ -1,8 +1,7 @@
 import pytest
 import time
 from pages.login_page import LoginPage
-from pages.locators import InventoryPageLocators
-from pages.locators import FourthItemPageLocators
+from pages.locators import *
 link = "https://www.saucedemo.com/"
 
 regular_user = "standard_user"
@@ -110,7 +109,8 @@ def test_login_with_invalid_password(browser):
 def test_password_field_exists(browser):
     driver = LoginPage(browser, link)
     driver.open_main_page()
-    driver.element_is_present(*LoginPageLocators.LOGIN_PASSWORD)
-    # password_field = browser.find_element(By.CSS_SELECTOR, "#password")
+    # password_field = driver.element_is_present(*LoginPageLocators.LOGIN_PASSWORD)
+    password_field = browser.find_element(By.CSS_SELECTOR, "#password")
     if password_field is not None:
         print("element is displayed")
+
