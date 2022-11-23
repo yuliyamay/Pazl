@@ -104,3 +104,13 @@ def test_login_with_invalid_password(browser):
         print("Screenshot saved to directory --> :: " + destinationFile)
     except NotADirectoryError:
         print("Not a directory issue")
+
+
+@pytest.mark.TC_001_14
+def test_password_field_exists(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    driver.element_is_present(*LoginPageLocators.LOGIN_PASSWORD)
+    # password_field = browser.find_element(By.CSS_SELECTOR, "#password")
+    if password_field is not None:
+        print("element is displayed")
