@@ -1,4 +1,5 @@
 import pytest
+import time
 from pages.login_page import LoginPage
 from pages.locators import InventoryPageLocators
 from pages.locators import FourthItemPageLocators
@@ -66,3 +67,40 @@ def test_fourth_item_back_to_product(browser):
     driver.click_element(*InventoryPageLocators.FLEECE_JACKET_ITEM_NAME)
     driver.click_element(*FourthItemPageLocators.BACK_TO_PRODUCTS_BUTTON_FOURTH_ITEM)
     driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
+
+@pytest.mark.TC_003_05
+@pytest.mark.xfail
+def test_open_facebook_page(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    driver.enter_user_name(regular_user)
+    driver.enter_user_password(password)
+    driver.click_login_button()
+    driver.click_element(*InventoryPageLocators.FACEBOOK_IMAGE_LINK)
+    time.sleep(3)
+    driver.switch_to.window(driver.window_handles[1])
+    driver.should_be_current_page("https://www.facebook.com/saucelabs")
+
+
+@pytest.mark.TC_001_02
+def test_login_with_invalid_password(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    driver.enter_user_name(regular_user)
+    driver.enter_user_password(invalid_password)
+    driver.click_login_button()
+    error_text = driver.getting_error_text()
+    assert (
+        error_text
+        == "Epic sadface: Username and password do not match any user in this service"
+    ), "wrong warning text"
+
+    fileName = str(round(time.time() * 1000)) + ".png"
+    destinationFileName = "C:\\Users\\alexa\\Desktop\\screenshots\\"
+    destinationFile = destinationFileName + fileName
+
+    try:
+        browser.save_screenshot(destinationFile)
+        print("Screenshot saved to directory --> :: " + destinationFile)
+    except NotADirectoryError:
+        print("Not a directory issue")
