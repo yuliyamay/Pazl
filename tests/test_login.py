@@ -80,7 +80,7 @@ def test_open_facebook_page(browser):
     driver.click_element(*InventoryPageLocators.FACEBOOK_IMAGE_LINK)
     handles = browser.window_handles
     # print("List of handles: ", handles)
-    time.sleep(3)
+    # time.sleep(3)
     for handle in handles:
         if handle not in parentHandle:
             browser.switch_to.window(handle)
@@ -119,4 +119,21 @@ def test_password_field_exists(browser):
     password_field = browser.find_element(By.CSS_SELECTOR, "#password")
     if password_field is not None:
         print("element is displayed")
+
+
+@pytest.mark.TC_003_04
+def test_open_facebook_page(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    driver.enter_user_name(regular_user)
+    driver.enter_user_password(password)
+    driver.click_login_button()
+    parentHandle = browser.current_window_handle
+    driver.click_element(*InventoryPageLocators.TWITTER_IMAGE_LINK)
+    handles = browser.window_handles
+    for handle in handles:
+        if handle not in parentHandle:
+            browser.switch_to.window(handle)
+    driver.should_be_current_page("https://twitter.com/saucelabs")
+
 
