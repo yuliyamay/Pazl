@@ -52,3 +52,15 @@ def test_login_empty_fields(browser):
     assert (
         error_text == "Epic sadface: Username is required"
     ), "wrong warning text"
+
+
+@pytest.mark.TC_001_10
+def test_fourth_item_back_to_product(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    driver.enter_user_name(regular_user)
+    driver.enter_user_password(password)
+    driver.click_login_button()
+    driver.click_element(*InventoryPageLocators.FLEECE_JACKET_ITEM_NAME)
+    driver.click_element(*FourthItemPageLocators.BACK_TO_PRODUCTS_BUTTON_FOURTH_ITEM)
+    driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
