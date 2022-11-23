@@ -1,5 +1,7 @@
 import pytest
 from pages.login_page import LoginPage
+from pages.locators import InventoryPageLocators
+from pages.locators import FourthItemPageLocators
 link = "https://www.saucedemo.com/"
 
 regular_user = "standard_user"
