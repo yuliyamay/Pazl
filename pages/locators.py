@@ -34,11 +34,12 @@ class InventoryPageLocators:
     PRODUCT_SORT_FILTER = (By.CSS_SELECTOR, ".product_sort_container")
 
     ''' FOOTERS '''
+    FOOTER_SECTION = (By.CSS_SELECTOR, ".footer")
     TWITTER_IMAGE_LINK = (By.CSS_SELECTOR, "li[class$='twitter'] a[target='_blank']")
     FACEBOOK_IMAGE_LINK = (By.CSS_SELECTOR, "li[class$='facebook'] a[target='_blank']")
-    LINKEDIN_IMAGE_LINK = (By.CSS_SELECTOR, "li[class$='facebook'] a[target='_blank']")
-    TERMS_OF_SERVICE = (By.CLASS_NAME, "li[class$='facebook'] a[target='_blank']")
-    FOOTER_ROBOT_IMAGE = (By.CLASS_NAME, ".footer_robot")
+    LINKEDIN_IMAGE_LINK = (By.CSS_SELECTOR, "li[class$='linkedin'] a[target='_blank']")
+    TERMS_OF_SERVICE = (By.CSS_SELECTOR, ".footer_copy")
+    FOOTER_ROBOT_IMAGE = (By.CLASS_NAME, "footer_robot")
 
     ''' SELLING ITEMS '''
     # FIRST ITEM
