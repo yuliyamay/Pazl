@@ -152,3 +152,12 @@ def test_open_facebook_page(browser):
             browser.switch_to.window(handle)
     driver.should_be_current_page("https://www.linkedin.com/company/sauce-labs/")
 
+
+
+@pytest.mark.TC001_24
+def test_login_invalid_username(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    driver.click_login_button()
+    error_text = driver.getting_error_text()
+    assert error_text == 'Epic sadface: Username is required', "wrong warning text"
