@@ -215,3 +215,17 @@ def test_user_is_redirected_to_cart_page_from_check_your_info_page(browser):
     driver.should_be_current_page("https://www.saucedemo.com/cart.html")
 
 
+@pytest.mark.TC_001_22
+def test_error_message_if_username_field_empty(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    driver.enter_user_password(password)
+    driver.click_login_button()
+    error_text = driver.getting_error_text()
+    assert error_text == 'Epic sadface: Username is required', "wrong warning text"
+
+
+
+
+
+
