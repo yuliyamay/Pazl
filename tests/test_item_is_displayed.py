@@ -31,3 +31,15 @@ def test_username_displayed(browser):
     driver.open_main_page()
     user_field_exist = driver.element_is_present(*LoginPageLocators.LOGIN_USER)
     assert user_field_exist, "field username is not exist."
+
+
+@pytest.mark.TC_003_05_L
+def test_open_twitter_page(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    driver.enter_user_name(regular_user)
+    driver.enter_user_password(password)
+    driver.click_login_button()
+    driver.click_element(*InventoryPageLocators.TWITTER_IMAGE_LINK)
+    browser.switch_to.window(browser.window_handles[1])
+    driver.should_be_current_page("https://twitter.com/saucelabs")
