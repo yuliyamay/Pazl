@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c634186-ca12-40c6-96ce-84457ca21174" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Pazl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Pazl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/locators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_item_is_displayed.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_item_is_displayed.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,12 +34,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
-  <component name="RunManager" selected="Python tests.Python tests for test_item_is_displayed.test_bot_displayed">
+}]]></component>
+  <component name="RunManager" selected="Python tests.Python tests for test_item_is_displayed.test_burger_menu_displayed">
     <configuration name="Python tests for test_item_is_displayed.test_bot_displayed" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Pazl" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -54,6 +52,20 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_item_is_displayed.test_bot_displayed&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_item_is_displayed.test_burger_menu_displayed" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Pazl" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_item_is_displayed.test_burger_menu_displayed&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -87,6 +99,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_burger_menu_displayed" />
         <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_bot_displayed" />
         <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_logo_displayed" />
         <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_login_button_displayed" />
@@ -109,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667783468020</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="New tests">
+      <created>1669348334651</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669348334651</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,6 +145,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added folder 'tests'" />
-    <option name="LAST_COMMIT_MESSAGE" value="added folder 'tests'" />
+    <MESSAGE value="New tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="New tests" />
   </component>
 </project>

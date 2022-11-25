@@ -56,3 +56,14 @@ def test_bot_displayed(browser):
     assert bot_exist, "Bot is not displayed"
 
 
+@pytest.mark.TC002_01
+def test_burger_menu_displayed(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    driver.enter_user_name(regular_user)
+    driver.enter_user_password(password)
+    driver.click_login_button()
+    driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
+    burger_image_exist = driver.element_is_present(*InventoryPageLocators.OPEN_MENU_BUTTON)
+    assert burger_image_exist, "Burger image is not displayed ."
+
