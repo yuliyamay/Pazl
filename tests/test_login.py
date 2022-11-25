@@ -170,9 +170,22 @@ def test_sixth_item_back_to_product(browser):
     driver.enter_user_name(regular_user)
     driver.enter_user_password(password)
     driver.click_login_button()
-    driver.click_element(*InventoryPageLocators.RED_SHIRT_ITEM_IMAGE)
-    time.sleep(3)
+    driver.click_element(*InventoryPageLocators.RED_SHIRT_ITEM_NAME)
+    # time.sleep(3)
     driver.click_element(*SixthItemPageLocators.BACK_TO_PRODUCTS_BUTTON_SIXTH_ITEM)
+    driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
+
+
+@pytest.mark.TC_999_11
+def test_fifth_item_back_to_product(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    driver.enter_user_name(regular_user)
+    driver.enter_user_password(password)
+    driver.click_login_button()
+    driver.click_element(*InventoryPageLocators.ONESIE_ITEM_NAME)
+    # time.sleep(3)
+    driver.click_element(*FifthItemPageLocators.BACK_TO_PRODUCTS_BUTTON_FIFTH_ITEM)
     driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
 
 
