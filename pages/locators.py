@@ -13,6 +13,8 @@ class LoginPageLocators:
     ERROR_ITEM_ON_NAME_FIELD = (By.CSS_SELECTOR, "#user-name + svg")
     ERROR_ITEM_ON_PASSWORD_FIELD = (By.CSS_SELECTOR, "#password + svg")
     ERROR_ELEMENT_BOTTOM_COLOR = (By.CSS_SELECTOR, ".input_error.error")
+    SWAGLABS_LOGO = (By.CSS_SELECTOR, ".login_logo")
+    BOT = (By.CSS_SELECTOR, ".bot_column")
 
 
 class InventoryPageLocators:

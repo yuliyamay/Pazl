@@ -30,4 +30,29 @@ def test_username_displayed(browser):
     driver = LoginPage(browser, link)
     driver.open_main_page()
     user_field_exist = driver.element_is_present(*LoginPageLocators.LOGIN_USER)
-    assert user_field_exist, "field username is not exist."
+    assert user_field_exist, "Username is not displayed"
+
+@pytest.mark.TC001_15
+def test_login_button_displayed(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    login_button_exist = driver.element_is_present(*LoginPageLocators.LOGIN_BTN)
+    assert login_button_exist, "Button is not displayed"
+
+
+@pytest.mark.TC001_16
+def test_logo_displayed(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    logo_exist = driver.element_is_present(*LoginPageLocators.SWAGLABS_LOGO)
+    assert logo_exist, "Logo is not displayed"
+
+
+@pytest.mark.TC001_17
+def test_bot_displayed(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    bot_exist = driver.element_is_present(*LoginPageLocators.BOT)
+    assert bot_exist, "Bot is not displayed"
+
+
