@@ -189,6 +189,20 @@ def test_fifth_item_back_to_product(browser):
     driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
 
 
+@pytest.mark.TC_006_04
+def test_user_is_redirected_to_inventory_page_from_cart_page(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    driver.enter_user_name(regular_user)
+    driver.enter_user_password(password)
+    driver.click_login_button()
+    driver.click_element(*InventoryPageLocators.SHOPPING_CART)
+    driver.click_element(*YourCartPage.CONTINUE_SHOPPING_BUTTON)
+    driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
+
+
+
+
 
 
 
