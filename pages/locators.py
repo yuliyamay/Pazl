@@ -15,6 +15,8 @@ class LoginPageLocators:
     ERROR_ELEMENT_BOTTOM_COLOR = (By.CSS_SELECTOR, ".input_error.error")
 
 
+
+
 class InventoryPageLocators:
 
     # HEADERS
@@ -37,8 +39,8 @@ class InventoryPageLocators:
     TWITTER_IMAGE_LINK = (By.CSS_SELECTOR, "li[class$='twitter'] a[target='_blank']")
     FACEBOOK_IMAGE_LINK = (By.CSS_SELECTOR, "li[class$='facebook'] a[target='_blank']")
     LINKEDIN_IMAGE_LINK = (By.CSS_SELECTOR, "li[class$='linkedin'] a[target='_blank']")
-    TERMS_OF_SERVICE = (By.CLASS_NAME, ".footer_copy")
-    FOOTER_ROBOT_IMAGE = (By.CLASS_NAME, ".footer_robot")
+    TERMS_OF_SERVICE = (By.CLASS_NAME, "footer_copy")
+    FOOTER_ROBOT_IMAGE = (By.CLASS_NAME, "footer_robot")
 
     ''' SELLING ITEMS '''
     # FIRST ITEM
