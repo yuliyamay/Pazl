@@ -1,9 +1,7 @@
-
 from selenium.webdriver.common.by import By
 
 
 class LoginPageLocators:
-
     LOGIN_USER = (By.CSS_SELECTOR, "#user-name")
     LOGIN_PASSWORD = (By.CSS_SELECTOR, "#password")
     LOGIN_LIST = (By.CSS_SELECTOR, ".login_credentials_wrap-inner")
@@ -18,7 +16,6 @@ class LoginPageLocators:
 
 
 class InventoryPageLocators:
-
     # HEADERS
     OPEN_MENU_BUTTON = (By.CSS_SELECTOR, "#react-burger-menu-btn")
     APP_LOGO = (By.CSS_SELECTOR, ".app_logo")
@@ -198,3 +195,9 @@ class CheckOutCompletePage:
     THANK_YOU_LABEL = (By.CSS_SELECTOR, "complete-header")
     YOUR_ORDER_DISPATCHED_LABEL = (By.CSS_SELECTOR, ".complete-text")
     BACK_HOME_BUTTON = (By.CSS_SELECTOR, "#back-to-products")
+
+
+class YourCartPage:
+    # https:/ www.saucedemo.com/cart.html
+    CONTINUE_SHOPPING_BUTTON = (By.CSS_SELECTOR, "#continue-shopping")
+    CHECKOUT_BUTTON = (By.CSS_SELECTOR, "#checkout")
