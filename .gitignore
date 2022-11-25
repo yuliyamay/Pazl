@@ -130,3 +130,5 @@ dmypy.json
 
 #pycharm dir
 /.idea/
+
+.idea/workspace.xml
