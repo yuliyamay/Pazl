@@ -198,3 +198,4 @@ class CheckOutCompletePage:
 class YourCartPage:
     # https:/ www.saucedemo.com/cart.html
     CONTINUE_SHOPPING_BUTTON = (By.CSS_SELECTOR, "#continue-shopping")
+    CHECKOUT_BUTTON = (By.CSS_SELECTOR, "#checkout")
