@@ -1,9 +1,7 @@
-
 from selenium.webdriver.common.by import By
 
 
 class LoginPageLocators:
-
     LOGIN_USER = (By.CSS_SELECTOR, "#user-name")
     LOGIN_PASSWORD = (By.CSS_SELECTOR, "#password")
     LOGIN_LIST = (By.CSS_SELECTOR, ".login_credentials_wrap-inner")
@@ -15,8 +13,9 @@ class LoginPageLocators:
     ERROR_ELEMENT_BOTTOM_COLOR = (By.CSS_SELECTOR, ".input_error.error")
 
 
-class InventoryPageLocators:
 
+
+class InventoryPageLocators:
     # HEADERS
     OPEN_MENU_BUTTON = (By.CSS_SELECTOR, "#react-burger-menu-btn")
     APP_LOGO = (By.CSS_SELECTOR, ".app_logo")
@@ -34,11 +33,10 @@ class InventoryPageLocators:
     PRODUCT_SORT_FILTER = (By.CSS_SELECTOR, ".product_sort_container")
 
     ''' FOOTERS '''
-    FOOTER_SECTION = (By.CSS_SELECTOR, ".footer")
     TWITTER_IMAGE_LINK = (By.CSS_SELECTOR, "li[class$='twitter'] a[target='_blank']")
     FACEBOOK_IMAGE_LINK = (By.CSS_SELECTOR, "li[class$='facebook'] a[target='_blank']")
     LINKEDIN_IMAGE_LINK = (By.CSS_SELECTOR, "li[class$='linkedin'] a[target='_blank']")
-    TERMS_OF_SERVICE = (By.CSS_SELECTOR, ".footer_copy")
+    TERMS_OF_SERVICE = (By.CLASS_NAME, "footer_copy")
     FOOTER_ROBOT_IMAGE = (By.CLASS_NAME, "footer_robot")
 
     ''' SELLING ITEMS '''
@@ -197,3 +195,9 @@ class CheckOutCompletePage:
     THANK_YOU_LABEL = (By.CSS_SELECTOR, "complete-header")
     YOUR_ORDER_DISPATCHED_LABEL = (By.CSS_SELECTOR, ".complete-text")
     BACK_HOME_BUTTON = (By.CSS_SELECTOR, "#back-to-products")
+
+
+class YourCartPage:
+    # https:/ www.saucedemo.com/cart.html
+    CONTINUE_SHOPPING_BUTTON = (By.CSS_SELECTOR, "#continue-shopping")
+    CHECKOUT_BUTTON = (By.CSS_SELECTOR, "#checkout")
