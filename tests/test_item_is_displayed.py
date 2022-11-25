@@ -1,5 +1,3 @@
-import time
-
 import pytest
 from pages.login_page import LoginPage
 from pages.locators import LoginPageLocators
@@ -31,6 +29,7 @@ def test_username_displayed(browser):
     driver.open_main_page()
     user_field_exist = driver.element_is_present(*LoginPageLocators.LOGIN_USER)
     assert user_field_exist, "Username is not displayed"
+
 
 @pytest.mark.TC001_15
 def test_login_button_displayed(browser):
@@ -67,8 +66,9 @@ def test_burger_menu_displayed(browser):
     burger_image_exist = driver.element_is_present(*InventoryPageLocators.OPEN_MENU_BUTTON)
     assert burger_image_exist, "Burger image is not displayed"
 
+
 @pytest.mark.TC002_02
-def test_logo_displayed(browser):
+def test_logo2_displayed(browser):
     driver = LoginPage(browser, link)
     driver.open_main_page()
     driver.enter_user_name(regular_user)
@@ -77,6 +77,7 @@ def test_logo_displayed(browser):
     driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
     logo_exist = driver.element_is_present(*InventoryPageLocators.APP_LOGO)
     assert logo_exist, "Logo is not displayed"
+
 
 @pytest.mark.TC002_03
 def test_cart_displayed(browser):

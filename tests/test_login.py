@@ -50,5 +50,4 @@ def test_login_empty_fields(browser):
     driver.click_login_button()
     error_text = driver.getting_error_text()
     assert (
-        error_text == "Epic sadface: Username is required"
-    ), "wrong warning text"
+     error_text == "Epic sadface: Username is required"), "wrong warning text"
