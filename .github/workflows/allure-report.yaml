@@ -43,9 +43,5 @@ jobs:
           PUBLISH_DIR: allure-history
 
 
-      - name: Allure report simple
-        uses: esemi/action-allure-report@v0.2.0
-
-
 
 
