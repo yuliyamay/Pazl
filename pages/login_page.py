@@ -5,7 +5,6 @@ link = "https://www.saucedemo.com/"
 
 
 class LoginPage(BasePage):
-
     def open_main_page(self):
         self.open_page()
         self.should_be_current_page(link)
@@ -23,5 +22,3 @@ class LoginPage(BasePage):
         elem = self.browser.find_element(*LoginPageLocators.ERROR_WARNING)
         text = elem.text
         return text
-
-

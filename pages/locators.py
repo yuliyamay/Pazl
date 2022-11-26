@@ -1,4 +1,3 @@
-
 from selenium.webdriver.common.by import By
 
 
@@ -45,52 +44,97 @@ class InventoryPageLocators:
 
     ''' SELLING ITEMS '''
     # FIRST ITEM
-    BACKPACK_ITEM_NAME = (By.CSS_SELECTOR, "a[id='item_4_title_link'] .inventory_item_name")
+    BACKPACK_ITEM_NAME = (
+        By.CSS_SELECTOR,
+        "a[id='item_4_title_link'] .inventory_item_name",
+    )
     BACKPACK_ITEM_IMAGE = (By.CSS_SELECTOR, "img[alt$='Backpack']")
-    BACKPACK_PRODUCT_DESCRIPTION = (By.XPATH, "(//div[@class = 'inventory_item_desc'])[1]")
+    BACKPACK_PRODUCT_DESCRIPTION = (
+        By.XPATH,
+        "(//div[@class = 'inventory_item_desc'])[1]",
+    )
     BACKPACK_PRICE = (By.XPATH, "(//div[@class = 'inventory_item_price'])[1]")
     BACKPACK_ADD_TO_CART_BUTTON = (By.ID, "#add-to-cart-sauce-labs-backpack")
     BACKPACK_REMOVE_BUTTON = (By.ID, "#remove-sauce-labs-backpack")
 
     # SECOND ITEM
-    BIKE_LIGHT_ITEM_NAME = (By.CSS_SELECTOR, "a[id='item_0_title_link'] .inventory_item_name")
+    BIKE_LIGHT_ITEM_NAME = (
+        By.CSS_SELECTOR,
+        "a[id='item_0_title_link'] .inventory_item_name",
+    )
     BIKE_LIGHT_ITEM_IMAGE = (By.CSS_SELECTOR, "img[alt*='Light']")
-    BIKE_LIGHT_PRODUCT_DESCRIPTION = (By.XPATH, "(//div[@class = 'inventory_item_desc'])[2]")
+    BIKE_LIGHT_PRODUCT_DESCRIPTION = (
+        By.XPATH,
+        "(//div[@class = 'inventory_item_desc'])[2]",
+    )
     BIKE_LIGHT_PRICE = (By.XPATH, "(//div[@class = 'inventory_item_price'])[2]")
     BIKE_LIGHT_ADD_TO_CART_BUTTON = (By.ID, "#add-to-cart-sauce-labs-bike-light")
     BIKE_LIGHT_REMOVE_BUTTON = (By.ID, "#remove-sauce-labs-bike-light")
 
     # THIRD ITEM
-    BOLT_TSHIRT_ITEM_NAME = (By.CSS_SELECTOR, "a[id='item_1_title_link'] div[class*='name']")
+    BOLT_TSHIRT_ITEM_NAME = (
+        By.CSS_SELECTOR,
+        "a[id='item_1_title_link'] div[class*='name']",
+    )
     BOLT_TSHIRT_ITEM_IMAGE = (By.CSS_SELECTOR, "img[alt$='T-Shirt']")
-    BOLT_TSHIRT_PRODUCT_DESCRIPTION = (By.XPATH, "(//div[@class = 'inventory_item_desc'])[3]")
+    BOLT_TSHIRT_PRODUCT_DESCRIPTION = (
+        By.XPATH,
+        "(//div[@class = 'inventory_item_desc'])[3]",
+    )
     BOLT_TSHIRT_PRICE = (By.XPATH, "(//div[@class = 'inventory_item_price'])[3]")
     BOLT_TSHIRT_ADD_TO_CART_BUTTON = (By.ID, "#add-to-cart-sauce-labs-bolt-t-shirt")
     BOLT_TSHIRT_REMOVE_BUTTON = (By.ID, "#remove-sauce-labs-bolt-t-shirt")
 
     # FOURTH_ITEM
-    FLEECE_JACKET_ITEM_NAME = (By.CSS_SELECTOR, "a[id='item_5_title_link'] div[class*='item']")
+    FLEECE_JACKET_ITEM_NAME = (
+        By.CSS_SELECTOR,
+        "a[id='item_5_title_link'] div[class*='item']",
+    )
     FLEECE_JACKET_ITEM_IMAGE = (By.CSS_SELECTOR, "img[alt*='Fleece']")
-    FLEECE_JACKET_PRODUCT_DESCRIPTION = (By.XPATH, "(//div[@class = 'inventory_item_desc'])[4]")
+    FLEECE_JACKET_PRODUCT_DESCRIPTION = (
+        By.XPATH,
+        "(//div[@class = 'inventory_item_desc'])[4]",
+    )
     FLEECE_JACKET_PRICE = (By.XPATH, "(//div[@class = 'inventory_item_price'])[4]")
     FLEECE_JACKET_ADD_TO_CART_BUTTON = (By.ID, "#add-to-cart-sauce-labs-fleece-jacket")
     FLEECE_JACKET_REMOVE_BUTTON = (By.ID, "#remove-sauce-labs-fleece-jacket")
 
     # FIFTH_ITEM
-    ONESIE_ITEM_NAME = (By.CSS_SELECTOR, "a[id='item_2_title_link'] div[class='inventory_item_name']")
+    ONESIE_ITEM_NAME = (
+        By.CSS_SELECTOR,
+        "a[id='item_2_title_link'] div[class='inventory_item_name']",
+    )
     ONESIE_ITEM_IMAGE = (By.CSS_SELECTOR, "img[alt*='Onesie']")
-    ONESIE_PRODUCT_DESCRIPTION = (By.XPATH, "(//div[@class = 'inventory_item_desc'])[5]")
+    ONESIE_PRODUCT_DESCRIPTION = (
+        By.XPATH,
+        "(//div[@class = 'inventory_item_desc'])[5]",
+    )
     ONESIE_PRICE = (By.XPATH, "(//div[@class = 'inventory_item_price'])[5]")
     ONESIE_ADD_TO_CART_BUTTON = (By.ID, "#add-to-cart-sauce-labs-onesie")
     ONESIE_REMOVE_BUTTON = (By.ID, "#remove-sauce-labs-onesie")
 
     # SIXTH_ITEM
-    RED_SHIRT_ITEM_NAME = (By.CSS_SELECTOR, "a[id='item_3_title_link'] div[class='inventory_item_name']")
-    RED_SHIRT_ITEM_IMAGE = (By.CSS_SELECTOR, "img[alt='Test.allTheThings() T-Shirt (Red)']")
-    RED_SHIRT_PRODUCT_DESCRIPTION = (By.XPATH, "(//div[@class = 'inventory_item_desc'])[6]")
+    RED_SHIRT_ITEM_NAME = (
+        By.CSS_SELECTOR,
+        "a[id='item_3_title_link'] div[class='inventory_item_name']",
+    )
+    RED_SHIRT_ITEM_IMAGE = (
+        By.CSS_SELECTOR,
+        "img[alt='Test.allTheThings() T-Shirt (Red)']",
+    )
+    RED_SHIRT_PRODUCT_DESCRIPTION = (
+        By.XPATH,
+        "(//div[@class = 'inventory_item_desc'])[6]",
+    )
     RED_SHIRT_PRICE = (By.XPATH, "(//div[@class = 'inventory_item_price'])[6]")
-    RED_SHIRT_ADD_TO_CART_BUTTON = (By.CSS_SELECTOR, "button[name='add-to-cart-test.allthethings()-t-shirt-(red)']")
-    RED_SHIRT_REMOVE_BUTTON = (By.CSS_SELECTOR, "button[name='remove-test.allthethings()-t-shirt-(red)']")
+    RED_SHIRT_ADD_TO_CART_BUTTON = (
+        By.CSS_SELECTOR,
+        "button[name='add-to-cart-test.allthethings()-t-shirt-(red)']",
+    )
+    RED_SHIRT_REMOVE_BUTTON = (
+        By.CSS_SELECTOR,
+        "button[name='remove-test.allthethings()-t-shirt-(red)']",
+    )
 
 
 class CartPageLocators:
@@ -106,7 +150,10 @@ class FirstItemPageLocators:
     DETAILS_NAME_FIRST_ITEM = (By.CSS_SELECTOR, ".inventory_details_name")
     DETAILS_DESCRIPTION_FIRST_ITEM = (By.CSS_SELECTOR, ".inventory_details_desc")
     PRICE_BUTTON_FIRST_ITEM = (By.CSS_SELECTOR, ".inventory_details_price")
-    ADD_TO_CART_BUTTON_FIRST_ITEM = (By.CSS_SELECTOR, "#add-to-cart-sauce-labs-backpack")
+    ADD_TO_CART_BUTTON_FIRST_ITEM = (
+        By.CSS_SELECTOR,
+        "#add-to-cart-sauce-labs-backpack",
+    )
     REMOVE_BUTTON_FIRST_ITEM = (By.CSS_SELECTOR, "#remove-sauce-labs-backpack")
     BACK_TO_PRODUCTS_BUTTON_FIRST_ITEM = (By.CSS_SELECTOR, "#back-to-products")
 
@@ -117,7 +164,10 @@ class SecondItemPageLocators:
     DETAILS_NAME_SECOND_ITEM = (By.CSS_SELECTOR, ".inventory_details_name")
     DETAILS_DESCRIPTION_SECOND_ITEM = (By.CSS_SELECTOR, ".inventory_details_desc")
     PRICE_BUTTON_SECOND_ITEM = (By.CSS_SELECTOR, ".inventory_details_price")
-    ADD_TO_CART_BUTTON_SECOND_ITEM = (By.CSS_SELECTOR, "#add-to-cart-sauce-labs-bike-light")
+    ADD_TO_CART_BUTTON_SECOND_ITEM = (
+        By.CSS_SELECTOR,
+        "#add-to-cart-sauce-labs-bike-light",
+    )
     REMOVE_BUTTON_SECOND_ITEM = (By.CSS_SELECTOR, "#remove-sauce-labs-bike-light")
     BACK_TO_PRODUCTS_BUTTON_SECOND_ITEM = (By.CSS_SELECTOR, "#back-to-products")
 
@@ -128,7 +178,10 @@ class ThirdItemPageLocators:
     DETAILS_NAME_THIRD_ITEM = (By.CSS_SELECTOR, ".inventory_details_name")
     DETAILS_DESCRIPTION_THIRD_ITEM = (By.CSS_SELECTOR, ".inventory_details_desc")
     PRICE_BUTTON_THIRD_ITEM = (By.CSS_SELECTOR, ".inventory_details_price")
-    ADD_TO_CART_BUTTON_THIRD_ITEM = (By.CSS_SELECTOR, "#add-to-cart-sauce-labs-bike-light")
+    ADD_TO_CART_BUTTON_THIRD_ITEM = (
+        By.CSS_SELECTOR,
+        "#add-to-cart-sauce-labs-bike-light",
+    )
     REMOVE_BUTTON_THIRD_ITEM = (By.CSS_SELECTOR, "#remove-sauce-labs-bike-light")
     BACK_TO_PRODUCTS_BUTTON_THIRD_ITEM = (By.CSS_SELECTOR, "#back-to-products")
 
@@ -139,7 +192,10 @@ class FourthItemPageLocators:
     DETAILS_NAME_FOURTH_ITEM = (By.CSS_SELECTOR, ".inventory_details_name")
     DETAILS_DESCRIPTION_FOURTH_ITEM = (By.CSS_SELECTOR, ".inventory_details_desc")
     PRICE_BUTTON_FOURTH_ITEM = (By.CSS_SELECTOR, ".inventory_details_price")
-    ADD_TO_CART_BUTTON_FOURTH_ITEM = (By.CSS_SELECTOR, "#add-to-cart-sauce-labs-bike-light")
+    ADD_TO_CART_BUTTON_FOURTH_ITEM = (
+        By.CSS_SELECTOR,
+        "#add-to-cart-sauce-labs-bike-light",
+    )
     REMOVE_BUTTON_FOURTH_ITEM = (By.CSS_SELECTOR, "#remove-sauce-labs-fleece-jacket")
     BACK_TO_PRODUCTS_BUTTON_FOURTH_ITEM = (By.CSS_SELECTOR, "#back-to-products")
 
@@ -161,8 +217,14 @@ class SixthItemPageLocators:
     DETAILS_NAME_SIXTH_ITEM = (By.CSS_SELECTOR, ".inventory_details_name")
     DETAILS_DESCRIPTION_SIXTH_ITEM = (By.CSS_SELECTOR, ".inventory_details_desc")
     PRICE_BUTTON_SIXTH_ITEM = (By.CSS_SELECTOR, ".inventory_details_price")
-    ADD_TO_CART_BUTTON_SIXTH_ITEM = (By.CSS_SELECTOR, ".btn_primary.btn_small.btn_inventory")
-    REMOVE_BUTTON_SIXTH_ITEM = (By.CSS_SELECTOR, ".btn_secondary.btn_small.btn_inventory")
+    ADD_TO_CART_BUTTON_SIXTH_ITEM = (
+        By.CSS_SELECTOR,
+        ".btn_primary.btn_small.btn_inventory",
+    )
+    REMOVE_BUTTON_SIXTH_ITEM = (
+        By.CSS_SELECTOR,
+        ".btn_secondary.btn_small.btn_inventory",
+    )
     BACK_TO_PRODUCTS_BUTTON_SIXTH_ITEM = (By.CSS_SELECTOR, "#back-to-products")
 
 
@@ -185,7 +247,10 @@ class CheckOutOverviewPage:
     PAYMENT_INFORMATION_LABEL = (By.CSS_SELECTOR, ".summary_info div:nth-child(1)")
     SUMMARY_VALUE_LABEL = (By.CSS_SELECTOR, ".summary_info div:nth-child(2)")
     SHIPPING_INFORMATION = (By.CSS_SELECTOR, ".summary_info div:nth-child(3)")
-    FREE_PONY_EXPRESS_DELIVERY_LABEL = (By.CSS_SELECTOR, ".summary_info div:nth-child(4)")
+    FREE_PONY_EXPRESS_DELIVERY_LABEL = (
+        By.CSS_SELECTOR,
+        ".summary_info div:nth-child(4)",
+    )
     ITEM_TOTAL_LABEL = (By.CSS_SELECTOR, ".summary_subtotal_label")
     TAX_LABEL = (By.CSS_SELECTOR, ".summary_tax_label")
     TOTAL_LABEL = (By.CSS_SELECTOR, ".summary_total_label")
