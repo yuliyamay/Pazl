@@ -65,7 +65,7 @@ def test_hidden_password(browser):
     driver.enter_user_password(password)
     # browser = webdriver.Chrome(ChromeDriverManager().install())
     pas_locator = "//div/input[@type='password']"
-    assert browser.find_element(By.XPATH, pas_locator).get_attribute('type'), "password"
+    assert browser.find_element(By.XPATH, pas_locator).get_attribute('type') == "password", "Password is not hidden"
 
 @pytest.mark.TC001_21_01
 def test_user_is_redirected_to_inventory_page_standard_user(browser):
