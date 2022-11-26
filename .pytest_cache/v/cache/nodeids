@@ -1,0 +1,19 @@
+[
+  "tests/test_item_is_displayed.py::test_bot_displayed",
+  "tests/test_item_is_displayed.py::test_burger_menu_displayed",
+  "tests/test_item_is_displayed.py::test_cart_displayed",
+  "tests/test_item_is_displayed.py::test_footer_item_displayed",
+  "tests/test_item_is_displayed.py::test_login_button_displayed",
+  "tests/test_item_is_displayed.py::test_loginbutton_displayed",
+  "tests/test_item_is_displayed.py::test_logo2_displayed",
+  "tests/test_item_is_displayed.py::test_logo_displayed",
+  "tests/test_item_is_displayed.py::test_username_displayed",
+  "tests/test_login.py::test_hidden_password",
+  "tests/test_login.py::test_login_empty_fields",
+  "tests/test_login.py::test_login_invalid_username",
+  "tests/test_login.py::test_login_locked_out_user",
+  "tests/test_login.py::test_login_valid_user",
+  "tests/test_login.py::test_login_without_password",
+  "tests/test_login.py::test_user_is_redirected_to_inventory_page_locked_out_user",
+  "tests/test_login.py::test_user_is_redirected_to_inventory_page_standard_user"
+]
