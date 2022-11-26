@@ -7,7 +7,6 @@ password = "secret_sauce"
 invalid_user = "invalid"
 invalid_password = "invalid"
 
-
 @pytest.mark.smoke
 def test_login_valid_user(browser):
     driver = LoginPage(browser, link)

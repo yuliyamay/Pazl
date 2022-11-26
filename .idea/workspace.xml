@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c634186-ca12-40c6-96ce-84457ca21174" name="Changes" comment="" />
+    <list default="true" id="9c634186-ca12-40c6-96ce-84457ca21174" name="Changes" comment="allure-report.yaml">
+      <change beforePath="$PROJECT_DIR$/.idea/Pazl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Pazl.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +51,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python tests.Python tests for test_item_is_displayed.test_bot_displayed">
+  <component name="RunManager" selected="Python tests.Python tests in tests">
     <configuration name="Python tests for test_item_is_displayed.test_bot_displayed" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Pazl" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -89,20 +94,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_item_is_displayed.test_login_button_displayed" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Pazl" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_item_is_displayed.test_login_button_displayed&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for test_item_is_displayed.test_logo_displayed" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Pazl" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -117,13 +108,27 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in tests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Pazl" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in tests" />
         <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_cart_displayed" />
         <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_logo_displayed" />
         <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_burger_menu_displayed" />
         <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_bot_displayed" />
-        <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_login_button_displayed" />
       </list>
     </recent_temporary>
   </component>
@@ -164,56 +169,7 @@
       <option name="project" value="LOCAL" />
       <updated>1669351697349</updated>
     </task>
-    <task id="LOCAL-00005" summary="Added more tests">
-      <created>1669432966215</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1669432966215</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Added more tests">
-      <created>1669433794230</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1669433794230</updated>
-    </task>
-    <task id="LOCAL-00007" summary="allure-report.yaml">
-      <created>1669434354411</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1669434354411</updated>
-    </task>
-    <task id="LOCAL-00008" summary="allure-report.yaml">
-      <created>1669437451217</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1669437451217</updated>
-    </task>
-    <task id="LOCAL-00009" summary="allure-report.yaml">
-      <created>1669437552766</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1669437552766</updated>
-    </task>
-    <task id="LOCAL-00010" summary="allure-report.yaml">
-      <created>1669437742930</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1669437742930</updated>
-    </task>
-    <task id="LOCAL-00011" summary="allure-report.yaml">
-      <created>1669437901252</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1669437901252</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -231,7 +187,6 @@
     <MESSAGE value="added folder 'tests'" />
     <MESSAGE value="New tests" />
     <MESSAGE value="Added more tests" />
-    <MESSAGE value="allure-report.yaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="allure-report.yaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more tests" />
   </component>
 </project>
