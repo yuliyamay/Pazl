@@ -99,10 +99,8 @@ def test_login_with_invalid_password(browser):
 def test_password_field_exists(browser):
     driver = LoginPage(browser, link)
     driver.open_main_page()
-    # password_field = driver.element_is_present(*LoginPageLocators.LOGIN_PASSWORD)
-    password_field = browser.find_element(By.CSS_SELECTOR, "#password")
-    if password_field is not None:
-        print("element is displayed")
+    password_field_exists= driver.element_is_present(*LoginPageLocators.LOGIN_PASSWORD)
+    assert password_field_exists, "Password field is not displayed"
 
 
 

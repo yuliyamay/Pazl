@@ -1,6 +1,7 @@
 import pytest
 from pages.login_page import LoginPage
 from pages.locators import InventoryPageLocators
+from pages.locators import LoginPageLocators
 
 link = "https://www.saucedemo.com/"
 
@@ -59,3 +60,6 @@ def test_open_linkedin_page(browser):
         if handle not in parentHandle:
             browser.switch_to.window(handle)
     driver.should_be_current_page("https://www.linkedin.com/company/sauce-labs/")
+
+
+
