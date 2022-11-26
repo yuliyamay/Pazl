@@ -1,5 +1,6 @@
 import pytest
 from pages.login_page import LoginPage
+
 link = "https://www.saucedemo.com/"
 
 regular_user = "standard_user"
@@ -25,9 +26,7 @@ def test_login_without_password(browser):
     driver.enter_user_name(regular_user)
     driver.click_login_button()
     error_text = driver.getting_error_text()
-    assert (
-        error_text == "Epic sadface: Password is required"
-    ), "wrong warning text"
+    assert error_text == "Epic sadface: Password is required", "wrong warning text"
 
 
 @pytest.mark.TC001_01
@@ -40,7 +39,8 @@ def test_login_invalid_username(browser):
     error_text = driver.getting_error_text()
     assert (
         error_text == "Epic sadface: Username and password do not "
-                      "match any user in this service"), "wrong warning text"
+        "match any user in this service"
+    ), "wrong warning text"
 
 
 @pytest.mark.TC001_03
@@ -49,5 +49,4 @@ def test_login_empty_fields(browser):
     driver.open_main_page()
     driver.click_login_button()
     error_text = driver.getting_error_text()
-    assert (
-     error_text == "Epic sadface: Username is required"), "wrong warning text"
+    assert error_text == "Epic sadface: Username is required", "wrong warning text"

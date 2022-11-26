@@ -19,7 +19,9 @@ def test_footer_item_displayed(browser):
     driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
     # footer_exist = driver.element_is_present(*InventoryPageLocators.FOOTER_SECTION)
     # assert footer_exist, "footer section is not displayed ."
-    footer_robot_image_exist = driver.element_is_present(*InventoryPageLocators.TERMS_OF_SERVICE)
+    footer_robot_image_exist = driver.element_is_present(
+        *InventoryPageLocators.TERMS_OF_SERVICE
+    )
     assert footer_robot_image_exist, "swag-bot image is not displayed ."
 
 
@@ -63,7 +65,9 @@ def test_burger_menu_displayed(browser):
     driver.enter_user_password(password)
     driver.click_login_button()
     driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
-    burger_image_exist = driver.element_is_present(*InventoryPageLocators.OPEN_MENU_BUTTON)
+    burger_image_exist = driver.element_is_present(
+        *InventoryPageLocators.OPEN_MENU_BUTTON
+    )
     assert burger_image_exist, "Burger image is not displayed"
 
 
