@@ -63,7 +63,6 @@ def test_hidden_password(browser):
     driver.open_main_page()
     driver.enter_user_name(regular_user)
     driver.enter_user_password(password)
-    # browser = webdriver.Chrome(ChromeDriverManager().install())
     pas_locator = "//div/input[@type='password']"
     assert browser.find_element(By.XPATH, pas_locator).get_attribute('type') == "password", "Password is not hidden"
 
