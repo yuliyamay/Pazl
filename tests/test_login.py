@@ -107,7 +107,7 @@ def test_password_field_exists(browser):
 
 
 @pytest.mark.TC_001_24
-def test_login_invalid_username(browser):
+def test_username_is_required(browser):
     driver = LoginPage(browser, link)
     driver.open_main_page()
     driver.click_login_button()
