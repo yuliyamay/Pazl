@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c634186-ca12-40c6-96ce-84457ca21174" name="Changes" comment="added folder 'tests'">
+    <list default="true" id="9c634186-ca12-40c6-96ce-84457ca21174" name="Changes" comment="'tests 003-05-l'">
+      <change afterPath="$PROJECT_DIR$/tests/test_inventory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/base_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/inventory_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/inventory_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_item_is_displayed.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_item_is_displayed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="AramAnt" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,6 +42,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/laysa/PycharmProjects/Pazl&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
@@ -98,9 +106,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_logo_displayed" />
-        <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_bot_displayed" />
-        <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_login_button_displayed" />
         <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_loginbutton_displayed" />
+        <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_login_button_displayed" />
+        <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_bot_displayed" />
+        <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_logo_displayed" />
       </list>
     </recent_temporary>
   </component>

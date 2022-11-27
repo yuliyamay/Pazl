@@ -13,13 +13,13 @@ class LoginPageLocators:
     ERROR_ELEMENT_BOTTOM_COLOR = (By.CSS_SELECTOR, ".input_error.error")
 
 
-
-
 class InventoryPageLocators:
     # HEADERS
     OPEN_MENU_BUTTON = (By.CSS_SELECTOR, "#react-burger-menu-btn")
     APP_LOGO = (By.CSS_SELECTOR, ".app_logo")
     SHOPPING_CART = (By.CSS_SELECTOR, ".shopping_cart_link")
+
+    SHOPPING_CART_BADGE = (By.CSS_SELECTOR, ".shopping_cart_badge")
 
     # BURGER MENU ITEMS
     ALL_ITEMS_MENU_ITEM = (By.CSS_SELECTOR, "#inventory_sidebar_link")
@@ -33,6 +33,7 @@ class InventoryPageLocators:
     PRODUCT_SORT_FILTER = (By.CSS_SELECTOR, ".product_sort_container")
 
     ''' FOOTERS '''
+    FOOTER_SECTION = (By.CSS_SELECTOR, "footer")
     TWITTER_IMAGE_LINK = (By.CSS_SELECTOR, "li[class$='twitter'] a[target='_blank']")
     FACEBOOK_IMAGE_LINK = (By.CSS_SELECTOR, "li[class$='facebook'] a[target='_blank']")
     LINKEDIN_IMAGE_LINK = (By.CSS_SELECTOR, "li[class$='linkedin'] a[target='_blank']")
@@ -40,13 +41,21 @@ class InventoryPageLocators:
     FOOTER_ROBOT_IMAGE = (By.CLASS_NAME, "footer_robot")
 
     ''' SELLING ITEMS '''
+
+    BUTTONS_ADD_X = (By.XPATH, '//button[text()="Add to cart"]')
+    BUTTONS_REMOVE_X = (By.XPATH, '//button[text()="Remove"]')
+
     # FIRST ITEM
     BACKPACK_ITEM_NAME = (By.CSS_SELECTOR, "a[id='item_4_title_link'] .inventory_item_name")
     BACKPACK_ITEM_IMAGE = (By.CSS_SELECTOR, "img[alt$='Backpack']")
     BACKPACK_PRODUCT_DESCRIPTION = (By.XPATH, "(//div[@class = 'inventory_item_desc'])[1]")
+    BACKPACK_ITEM_DESC = (By.CSS_SELECTOR, ".inventory_item_desc")
     BACKPACK_PRICE = (By.XPATH, "(//div[@class = 'inventory_item_price'])[1]")
-    BACKPACK_ADD_TO_CART_BUTTON = (By.ID, "#add-to-cart-sauce-labs-backpack")
-    BACKPACK_REMOVE_BUTTON = (By.ID, "#remove-sauce-labs-backpack")
+    BACKPACK_ADD_TO_CART_BUTTON = (By.ID, "add-to-cart-sauce-labs-backpack")
+    BACKPACK_REMOVE_BUTTON = (By.ID, 'remove-sauce-labs-backpack')
+    BACKPACK_ADD_TO_CART_BUTTON_X = (By.XPATH, "//button[@id='add-to-cart-sauce-labs-backpack]'")
+
+
 
     # SECOND ITEM
     BIKE_LIGHT_ITEM_NAME = (By.CSS_SELECTOR, "a[id='item_0_title_link'] .inventory_item_name")

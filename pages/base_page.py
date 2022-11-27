@@ -1,6 +1,5 @@
 import datetime
 from selenium.common.exceptions import NoSuchElementException
-import os
 
 
 class BasePage:
