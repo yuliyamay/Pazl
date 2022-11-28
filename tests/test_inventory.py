@@ -24,10 +24,13 @@ def test_check_number_in_cart(browser):
 
     print('****** +++++++ ***********')
 
-    amount_displayed = driver.element_is_present(*InventoryPageLocators.SHOPPING_CART_BADGE)
+    amount_displayed = driver.element_is_present(
+        *InventoryPageLocators.SHOPPING_CART_BADGE
+    )
     assert amount_displayed == False, 'Number in cart is not 0.'
 
-    items = 0; amount = 0
+    items = 0
+    amount = 0
     while driver.element_is_present(*InventoryPageLocators.BUTTONS_ADD_X):
         driver.click_element(*InventoryPageLocators.BUTTONS_ADD_X)
         time.sleep(1)
@@ -51,4 +54,3 @@ def test_check_number_in_cart(browser):
         else:
             amount = driver.getting_amount_of_items_in_cart()
             assert int(amount) == items, "Wrong number in the cart. -"
-
