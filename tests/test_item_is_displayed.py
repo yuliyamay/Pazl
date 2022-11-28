@@ -25,6 +25,18 @@ def test_footer_item_displayed(browser):
     assert footer_robot_image_exist, "swag-bot image is not displayed ."
 
 
+@pytest.mark.TC003_01_L
+def test_footer_item_displayed(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    driver.enter_user_name(regular_user)
+    driver.enter_user_password(password)
+    driver.click_login_button()
+    driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
+    footer_exist = driver.element_is_present(*InventoryPageLocators.FOOTER_SECTION)
+    assert footer_exist, "footer section is not displayed ."
+
+
 @pytest.mark.TC001_13
 def test_username_displayed(browser):
     driver = LoginPage(browser, link)

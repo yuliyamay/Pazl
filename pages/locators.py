@@ -22,6 +22,7 @@ class InventoryPageLocators:
     OPEN_MENU_BUTTON = (By.CSS_SELECTOR, "#react-burger-menu-btn")
     APP_LOGO = (By.CSS_SELECTOR, ".app_logo")
     SHOPPING_CART = (By.CSS_SELECTOR, ".shopping_cart_link")
+    SHOPPING_CART_BADGE = (By.CSS_SELECTOR, "span[class ='shopping_cart_badge'")
 
     # BURGER MENU ITEMS
     ALL_ITEMS_MENU_ITEM = (By.CSS_SELECTOR, "#inventory_sidebar_link")
@@ -43,6 +44,9 @@ class InventoryPageLocators:
     FOOTER_ROBOT_IMAGE = (By.CLASS_NAME, "footer_robot")
 
     ''' SELLING ITEMS '''
+    BUTTONS_ADD_X = (By.XPATH, '//button[text()="Add to cart"]')
+    BUTTONS_REMOVE_X = (By.XPATH, '//button[text()="Remove"]')
+
     # FIRST ITEM
     BACKPACK_ITEM_NAME = (
         By.CSS_SELECTOR,
@@ -54,8 +58,8 @@ class InventoryPageLocators:
         "(//div[@class = 'inventory_item_desc'])[1]",
     )
     BACKPACK_PRICE = (By.XPATH, "(//div[@class = 'inventory_item_price'])[1]")
-    BACKPACK_ADD_TO_CART_BUTTON = (By.ID, "#add-to-cart-sauce-labs-backpack")
-    BACKPACK_REMOVE_BUTTON = (By.ID, "#remove-sauce-labs-backpack")
+    BACKPACK_ADD_TO_CART_BUTTON = (By.ID, "add-to-cart-sauce-labs-backpack")
+    BACKPACK_REMOVE_BUTTON = (By.ID, "remove-sauce-labs-backpack")
 
     # SECOND ITEM
     BIKE_LIGHT_ITEM_NAME = (
@@ -68,8 +72,8 @@ class InventoryPageLocators:
         "(//div[@class = 'inventory_item_desc'])[2]",
     )
     BIKE_LIGHT_PRICE = (By.XPATH, "(//div[@class = 'inventory_item_price'])[2]")
-    BIKE_LIGHT_ADD_TO_CART_BUTTON = (By.ID, "#add-to-cart-sauce-labs-bike-light")
-    BIKE_LIGHT_REMOVE_BUTTON = (By.ID, "#remove-sauce-labs-bike-light")
+    BIKE_LIGHT_ADD_TO_CART_BUTTON = (By.ID, "add-to-cart-sauce-labs-bike-light")
+    BIKE_LIGHT_REMOVE_BUTTON = (By.ID, "remove-sauce-labs-bike-light")
 
     # THIRD ITEM
     BOLT_TSHIRT_ITEM_NAME = (
@@ -82,8 +86,8 @@ class InventoryPageLocators:
         "(//div[@class = 'inventory_item_desc'])[3]",
     )
     BOLT_TSHIRT_PRICE = (By.XPATH, "(//div[@class = 'inventory_item_price'])[3]")
-    BOLT_TSHIRT_ADD_TO_CART_BUTTON = (By.ID, "#add-to-cart-sauce-labs-bolt-t-shirt")
-    BOLT_TSHIRT_REMOVE_BUTTON = (By.ID, "#remove-sauce-labs-bolt-t-shirt")
+    BOLT_TSHIRT_ADD_TO_CART_BUTTON = (By.ID, "add-to-cart-sauce-labs-bolt-t-shirt")
+    BOLT_TSHIRT_REMOVE_BUTTON = (By.ID, "remove-sauce-labs-bolt-t-shirt")
 
     # FOURTH_ITEM
     FLEECE_JACKET_ITEM_NAME = (
@@ -96,8 +100,8 @@ class InventoryPageLocators:
         "(//div[@class = 'inventory_item_desc'])[4]",
     )
     FLEECE_JACKET_PRICE = (By.XPATH, "(//div[@class = 'inventory_item_price'])[4]")
-    FLEECE_JACKET_ADD_TO_CART_BUTTON = (By.ID, "#add-to-cart-sauce-labs-fleece-jacket")
-    FLEECE_JACKET_REMOVE_BUTTON = (By.ID, "#remove-sauce-labs-fleece-jacket")
+    FLEECE_JACKET_ADD_TO_CART_BUTTON = (By.ID, "add-to-cart-sauce-labs-fleece-jacket")
+    FLEECE_JACKET_REMOVE_BUTTON = (By.ID, "remove-sauce-labs-fleece-jacket")
 
     # FIFTH_ITEM
     ONESIE_ITEM_NAME = (
@@ -110,8 +114,8 @@ class InventoryPageLocators:
         "(//div[@class = 'inventory_item_desc'])[5]",
     )
     ONESIE_PRICE = (By.XPATH, "(//div[@class = 'inventory_item_price'])[5]")
-    ONESIE_ADD_TO_CART_BUTTON = (By.ID, "#add-to-cart-sauce-labs-onesie")
-    ONESIE_REMOVE_BUTTON = (By.ID, "#remove-sauce-labs-onesie")
+    ONESIE_ADD_TO_CART_BUTTON = (By.ID, "add-to-cart-sauce-labs-onesie")
+    ONESIE_REMOVE_BUTTON = (By.ID, "remove-sauce-labs-onesie")
 
     # SIXTH_ITEM
     RED_SHIRT_ITEM_NAME = (
