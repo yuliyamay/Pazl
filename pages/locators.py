@@ -22,6 +22,7 @@ class InventoryPageLocators:
     OPEN_MENU_BUTTON = (By.CSS_SELECTOR, "#react-burger-menu-btn")
     APP_LOGO = (By.CSS_SELECTOR, ".app_logo")
     SHOPPING_CART = (By.CSS_SELECTOR, ".shopping_cart_link")
+    SHOPPING_CART_BADGE = (By.CSS_SELECTOR, "span[class ='shopping_cart_badge'")
 
     # BURGER MENU ITEMS
     ALL_ITEMS_MENU_ITEM = (By.CSS_SELECTOR, "#inventory_sidebar_link")
@@ -43,6 +44,9 @@ class InventoryPageLocators:
     FOOTER_ROBOT_IMAGE = (By.CLASS_NAME, "footer_robot")
 
     ''' SELLING ITEMS '''
+    BUTTONS_ADD_X = (By.XPATH, '//button[text()="Add to cart"]')
+    BUTTONS_REMOVE_X = (By.XPATH, '//button[text()="Remove"]')
+
     # FIRST ITEM
     BACKPACK_ITEM_NAME = (
         By.CSS_SELECTOR,
