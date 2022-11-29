@@ -1,0 +1,16 @@
+name: Greetings
+
+on: [pull_request_target, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.ALLURE_DEPLOY}}
+        issue-message: "Please, make sure< you used updated main branch copy. It will help to avoid conflicts."
+        pr-message: "Hello, thank you for your new tests"
