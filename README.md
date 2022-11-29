@@ -1,4 +1,5 @@
 [![allure-report](https://github.com/yuliyamay/Pazl/actions/workflows/allure-report.yaml/badge.svg)](https://github.com/yuliyamay/Pazl/actions/workflows/allure-report.yaml)
+[![Greetings](https://github.com/yuliyamay/Pazl/actions/workflows/greetings.yml/badge.svg)](https://github.com/yuliyamay/Pazl/actions/workflows/greetings.yml)
 
 Инструкция по запуску проекта автоматизации:
 1. Открыть terminal/powershell.
