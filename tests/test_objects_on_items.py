@@ -8,7 +8,7 @@ regular_user = "standard_user"
 password = "secret_sauce"
 
 
-@pytest.mark.TC_007_01
+@pytest.mark.TC007_01
 def test_verify_objects(browser):
     driver = InventoryPage(browser, link)
     driver.open_main_page()
