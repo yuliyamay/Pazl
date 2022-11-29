@@ -1,78 +1,167 @@
-name: selenium_test
+name: Saucedemo_05
 
 on:
+  push:
+    branches: [ main ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
-permissions:
-  checks: write
-  pull-requests: write
-  contents: read
 
 jobs:
-  selenium_test:
+  build:
+
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10"]
+
     steps:
-      - name: Check out this repo
-        uses: actions/checkout@v3
-      - name: install Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-      - name: Check code for errors by flake8 and format code with black
-        uses: ricardochaves/python-lint@v1.4.0
-        with:
-          python-root-list: ""
-          use-pylint: false
-          use-pycodestyle: false
-          use-flake8: false
-          use-black: true
-          use-mypy: false
-          use-isort: false
-          extra-pylint-options: ""
-          extra-pycodestyle-options: ""
-          extra-flake8-options: "--count --benchmark --ignore=E501 --ignore=W503 --ignore=F841"
-          extra-black-options: ". -S"
-          extra-mypy-options: ""
-          extra-isort-options: ""
-      - name: install Chrome
-        uses: browser-actions/setup-chrome@latest
-      - name: check Chrome version
-        run: chrome --version
-      - name: install Poetry
-        run: pip install poetry
-      - name: install dependencies
-        run: poetry update
+    - uses: actions/checkout@v3
+      id: setup-python
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
 
-      - name: Run Test
-        if: always()
-        run: poetry run pytest --alluredir=allure-results
-        continue-on-error: true
-
-      - name: Get Allure history
-        uses: actions/checkout@v2
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
-
-      - name: Allure Report action from marketplace
-        uses: simple-elf/allure-report-action@master
-        if: always()
-        with:
-          allure_results: allure-results
-          allure_history: allure-history
+    - name: Install poetry
+      uses: snok/install-poetry@v1
+      with:
+        virtualenvs-create: true
+        virtualenvs-in-project: true
+        installer-parallel: true
 
 
-      - name: Deploy report to Github Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v2
-        env:
-          PERSONAL_TOKEN: ${{ secrets.ALLURE_DEPLOY  }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-history
+    - name: Install poetry dependencies
+      if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+      run: poetry install --no-interaction --no-root
+
+    - name: Run tests
+      run:
+        poetry run pytest -v
+
+      on:
+        push:
+          branches ignore: [ main ]
+        pull_request:
+          branches: [ main ]
 
 
+      jobs:
+        linter_name:
+          name: runner/black
+          runs-on: ubuntu-latest
+          steps:
+            - uses: actions/checkout@v3
+            - name: Check files using the black formatter
+              uses: rickstaa/action-black@v1
+              id: action_black
+              with:
+                black_args: ". --exclude .venv"
+            - name: Create Commit
+              if: steps.action_black.outputs.is_formatted == 'true'
+              uses: stefanzweifel/git-auto-commit-action@v4
+              with:
+                commit_message: ":art: Format Python code with psf/black"
 
 
+        build:
+
+          runs-on: ubuntu-latest
+          strategy:
+            fail-fast: false
+            matrix:
+              python-version: [ "3.10" ]
+
+          steps:
+            - uses: actions/checkout@v3
+              id: setup-python
+            - name: Set up Python ${{ matrix.python-version }}
+              uses: actions/setup-python@v3
+              with:
+                python-version: ${{ matrix.python-version }}
+
+            - name: Install poetry
+              uses: snok/install-poetry@v1
+              with:
+                virtualenvs-create: true
+                virtualenvs-in-project: true
+                installer-parallel: true
+
+            - name: Load cached venv
+              id: cached-poetry-dependencies
+              uses: actions/cache@v3
+              with:
+                path: deployer/.venv
+                key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-deployer.yml') }}
+
+            - name: Install poetry dependencies
+              if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+              run: poetry install --no-interaction --no-root
+
+            - name: Run tests
+              run:
+                poetry run pytest -v -s --browser=firefox
+
+              on:
+                push:
+                  branches ignore: [ main ]
+                pull_request:
+                  branches: [ main ]
+
+
+              jobs:
+                linter_name:
+                  name: runner/black
+                  runs-on: ubuntu-latest
+                  steps:
+                    - uses: actions/checkout@v3
+                    - name: Check files using the black formatter
+                      uses: rickstaa/action-black@v1
+                      id: action_black
+                      with:
+                        black_args: ". --exclude .venv"
+                    - name: Create Commit
+                      if: steps.action_black.outputs.is_formatted == 'true'
+                      uses: stefanzweifel/git-auto-commit-action@v4
+                      with:
+                        commit_message: ":art: Format Python code with psf/black"
+
+
+                build:
+
+                  runs-on: ubuntu-latest
+                  strategy:
+                    fail-fast: false
+                    matrix:
+                      python-version: [ "3.10" ]
+
+                  steps:
+                    - uses: actions/checkout@v3
+                      id: setup-python
+                    - name: Set up Python ${{ matrix.python-version }}
+                      uses: actions/setup-python@v3
+                      with:
+                        python-version: ${{ matrix.python-version }}
+
+                    - name: Install poetry
+                      uses: snok/install-poetry@v1
+                      with:
+                        virtualenvs-create: true
+                        virtualenvs-in-project: true
+                        installer-parallel: true
+
+                    - name: Load cached venv
+                      id: cached-poetry-dependencies
+                      uses: actions/cache@v3
+                      with:
+                        path: deployer/.venv
+                        key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-deployer.yml') }}
+
+                    - name: Install poetry dependencies
+                      if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+                      run: poetry install --no-interaction --no-root
+
+                    - name: Run tests
+                      run:
+                        poetry run pytest -v -s --browser=firefox
