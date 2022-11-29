@@ -49,17 +49,18 @@ class InventoryPageLocators:
 
     # FIRST ITEM
     BACKPACK_ITEM_NAME = (
-        By.CSS_SELECTOR,
-        "a[id='item_4_title_link'] .inventory_item_name",
+        By.XPATH,
+        '//*[@id="inventory_item_container"]',
     )
     BACKPACK_ITEM_IMAGE = (By.CSS_SELECTOR, "img[alt$='Backpack']")
     BACKPACK_PRODUCT_DESCRIPTION = (
         By.XPATH,
-        "(//div[@class = 'inventory_item_desc'])[1]",
+        '//*[@id="inventory_item_container"]',
     )
-    BACKPACK_PRICE = (By.XPATH, "(//div[@class = 'inventory_item_price'])[1]")
+    BACKPACK_PRICE = (By.XPATH, '//*[@id="inventory_item_container"]')
     BACKPACK_ADD_TO_CART_BUTTON = (By.ID, "add-to-cart-sauce-labs-backpack")
     BACKPACK_REMOVE_BUTTON = (By.ID, "remove-sauce-labs-backpack")
+    BACKPACK_BACK_BUTTON = (By.XPATH, '//*[@id="back-to-products"]')
 
     # SECOND ITEM
     BIKE_LIGHT_ITEM_NAME = (
