@@ -35,7 +35,7 @@ class InventoryPageLocators:
     PRODUCTS_TITLE = (By.CSS_SELECTOR, ".title")
     PRODUCT_SORT_FILTER = (By.CSS_SELECTOR, ".product_sort_container")
 
-    ''' FOOTERS '''
+    """ FOOTERS """
     FOOTER_SECTION = (By.CSS_SELECTOR, ".footer")
     TWITTER_IMAGE_LINK = (By.CSS_SELECTOR, "li[class$='twitter'] a[target='_blank']")
     FACEBOOK_IMAGE_LINK = (By.CSS_SELECTOR, "li[class$='facebook'] a[target='_blank']")
@@ -43,7 +43,7 @@ class InventoryPageLocators:
     TERMS_OF_SERVICE = (By.CSS_SELECTOR, ".footer_copy")
     FOOTER_ROBOT_IMAGE = (By.CLASS_NAME, "footer_robot")
 
-    ''' SELLING ITEMS '''
+    """ SELLING ITEMS """
     BUTTONS_ADD_X = (By.XPATH, '//button[text()="Add to cart"]')
     BUTTONS_REMOVE_X = (By.XPATH, '//button[text()="Remove"]')
 
