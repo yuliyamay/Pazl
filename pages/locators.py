@@ -147,6 +147,15 @@ class CartPageLocators:
     SECONDARY_HEADER_TITLE = (By.CSS_SELECTOR, ".title")
     CONTINUE_SHOPPING_BUTTON = (By.CSS_SELECTOR, "#continue-shopping")
     CHECKOUT_BUTTON = (By.CSS_SELECTOR, "#checkout")
+    QTY_BOX = (By.CSS_SELECTOR, ".cart_quantity")
+    NAME_BIKE_LIGHT_CART = (By.CSS_SELECTOR, "#item_0_title_link")
+    NAME_BOLT_T_SHIRT_CART = (By.CSS_SELECTOR, "#item_1_title_link")
+    NAME_ONESIE_CART = (By.CSS_SELECTOR, "#item_2_title_link")
+    NAME_RED_T_SHIRT_CART = (By.CSS_SELECTOR, "#item_3_title_link")
+    NAME_BACKPACK_CART = (By.CSS_SELECTOR, "#item_4_title_link")
+    NAME_JACKET_CART = (By.CSS_SELECTOR, "#item_5_title_link")
+    DESCRIPTION_ITEM_CART = (By.CSS_SELECTOR, ".inventory_item_desc")
+    PRICE_ITEM_CART = (By.CSS_SELECTOR, ".item_pricebar")
 
 
 class FirstItemPageLocators:
