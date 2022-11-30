@@ -2,7 +2,6 @@ from selenium.webdriver.common.by import By
 
 
 class LoginPageLocators:
-
     LOGIN_USER = (By.CSS_SELECTOR, "#user-name")
     LOGIN_PASSWORD = (By.CSS_SELECTOR, "#password")
     LOGIN_LIST = (By.CSS_SELECTOR, ".login_credentials_wrap-inner")
@@ -17,7 +16,6 @@ class LoginPageLocators:
 
 
 class InventoryPageLocators:
-
     # HEADERS
     OPEN_MENU_BUTTON = (By.CSS_SELECTOR, "#react-burger-menu-btn")
     APP_LOGO = (By.CSS_SELECTOR, ".app_logo")
