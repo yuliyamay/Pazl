@@ -17,9 +17,15 @@ def test_check_empty_fields(browser):
     driver.click_element(*InventoryPageLocators.SHOPPING_CART)
     driver.should_be_current_page("https://www.saucedemo.com/cart.html")
     driver.click_element(*CartPageLocators.CHECKOUT_BUTTON)
-    first_name_field = driver.element_is_present(*CheckOutYourInformationPage.CHECKOUT_FIRST_NAME)
+    first_name_field = driver.element_is_present(
+        *CheckOutYourInformationPage.CHECKOUT_FIRST_NAME
+    )
     assert first_name_field, "Field is not empty"
-    last_name_field = driver.element_is_present(*CheckOutYourInformationPage.CHECKOUT_LAST_NAME)
+    last_name_field = driver.element_is_present(
+        *CheckOutYourInformationPage.CHECKOUT_LAST_NAME
+    )
     assert last_name_field, "Field is not empty"
-    zipcode_field = driver.element_is_present(*CheckOutYourInformationPage.ZIP_CODE_FIELD)
+    zipcode_field = driver.element_is_present(
+        *CheckOutYourInformationPage.ZIP_CODE_FIELD
+    )
     assert zipcode_field, "Field is not empty"
