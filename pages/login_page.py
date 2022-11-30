@@ -22,3 +22,9 @@ class LoginPage(BasePage):
         elem = self.browser.find_element(*LoginPageLocators.ERROR_WARNING)
         text = elem.text
         return text
+
+    def login_success(self):
+        self.open_page()
+        self.enter_user_name('standard_user')
+        self.enter_user_password('secret_sauce')
+        self.click_login_button()
