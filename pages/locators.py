@@ -35,7 +35,7 @@ class InventoryPageLocators:
     PRODUCTS_TITLE = (By.CSS_SELECTOR, ".title")
     PRODUCT_SORT_FILTER = (By.CSS_SELECTOR, ".product_sort_container")
 
-    ''' FOOTERS '''
+    """ FOOTERS """
     FOOTER_SECTION = (By.CSS_SELECTOR, ".footer")
     TWITTER_IMAGE_LINK = (By.CSS_SELECTOR, "li[class$='twitter'] a[target='_blank']")
     FACEBOOK_IMAGE_LINK = (By.CSS_SELECTOR, "li[class$='facebook'] a[target='_blank']")
@@ -43,23 +43,24 @@ class InventoryPageLocators:
     TERMS_OF_SERVICE = (By.CSS_SELECTOR, ".footer_copy")
     FOOTER_ROBOT_IMAGE = (By.CLASS_NAME, "footer_robot")
 
-    ''' SELLING ITEMS '''
+    """ SELLING ITEMS """
     BUTTONS_ADD_X = (By.XPATH, '//button[text()="Add to cart"]')
     BUTTONS_REMOVE_X = (By.XPATH, '//button[text()="Remove"]')
 
     # FIRST ITEM
     BACKPACK_ITEM_NAME = (
-        By.CSS_SELECTOR,
-        "a[id='item_4_title_link'] .inventory_item_name",
+        By.XPATH,
+        '//*[@id="inventory_item_container"]',
     )
     BACKPACK_ITEM_IMAGE = (By.CSS_SELECTOR, "img[alt$='Backpack']")
     BACKPACK_PRODUCT_DESCRIPTION = (
         By.XPATH,
-        "(//div[@class = 'inventory_item_desc'])[1]",
+        '//*[@id="inventory_item_container"]',
     )
-    BACKPACK_PRICE = (By.XPATH, "(//div[@class = 'inventory_item_price'])[1]")
+    BACKPACK_PRICE = (By.XPATH, '//*[@id="inventory_item_container"]')
     BACKPACK_ADD_TO_CART_BUTTON = (By.ID, "add-to-cart-sauce-labs-backpack")
     BACKPACK_REMOVE_BUTTON = (By.ID, "remove-sauce-labs-backpack")
+    BACKPACK_BACK_BUTTON = (By.XPATH, '//*[@id="back-to-products"]')
 
     # SECOND ITEM
     BIKE_LIGHT_ITEM_NAME = (

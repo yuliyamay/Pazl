@@ -62,7 +62,7 @@ def test_hidden_password(browser):
     driver.enter_user_password(password)
     pas_locator = "//div/input[@type='password']"
     assert (
-        browser.find_element(By.XPATH, pas_locator).get_attribute('type') == "password"
+        browser.find_element(By.XPATH, pas_locator).get_attribute("type") == "password"
     ), "Password is not hidden"
 
 
@@ -95,5 +95,5 @@ def test_login_locked_out_user(browser):
     driver.click_login_button()
     error_text = driver.getting_error_text()
     assert (
-        error_text == 'Epic sadface: Sorry, this user has been locked out.'
+        error_text == "Epic sadface: Sorry, this user has been locked out."
     ), "wrong warning text"
