@@ -157,6 +157,7 @@ class CartPageLocators:
     DESCRIPTION_ITEM_CART = (By.CSS_SELECTOR, ".inventory_item_desc")
     PRICE_ITEM_CART = (By.CSS_SELECTOR, ".item_pricebar")
 
+
 class FirstItemPageLocators:
     # https://www.saucedemo.com/inventory-item.html?id=4
     INVENTORY_DETAILS_IMG_FIRST_ITEM = (By.CSS_SELECTOR, ".inventory_details_img")
