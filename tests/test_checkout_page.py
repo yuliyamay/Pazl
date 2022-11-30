@@ -23,3 +23,5 @@ def test_check_empty_fields(browser):
     assert last_name_field, "Field is not empty"
     zipcode_field = driver.element_is_present(*CheckOutYourInformationPage.ZIP_CODE_FIELD)
     assert zipcode_field, "Field is not empty"
+
+
