@@ -1,4 +1,6 @@
 import pytest
+
+from pages.inventory_page import InventoryPage
 from pages.login_page import LoginPage
 from pages.locators import LoginPageLocators
 from pages.locators import InventoryPageLocators
@@ -72,10 +74,7 @@ def test_bot_displayed(browser):
 @pytest.mark.TC002_01
 def test_burger_menu_displayed(browser):
     driver = LoginPage(browser, link)
-    driver.open_main_page()
-    driver.enter_user_name(regular_user)
-    driver.enter_user_password(password)
-    driver.click_login_button()
+    driver.login_success()
     driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
     burger_image_exist = driver.element_is_present(
         *InventoryPageLocators.OPEN_MENU_BUTTON
@@ -86,11 +85,7 @@ def test_burger_menu_displayed(browser):
 @pytest.mark.TC002_02
 def test_logo2_displayed(browser):
     driver = LoginPage(browser, link)
-    driver.open_main_page()
-    driver.enter_user_name(regular_user)
-    driver.enter_user_password(password)
-    driver.click_login_button()
-    driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
+    driver.login_success()
     logo_exist = driver.element_is_present(*InventoryPageLocators.APP_LOGO)
     assert logo_exist, "Logo is not displayed"
 
@@ -98,10 +93,23 @@ def test_logo2_displayed(browser):
 @pytest.mark.TC002_03
 def test_cart_displayed(browser):
     driver = LoginPage(browser, link)
-    driver.open_main_page()
-    driver.enter_user_name(regular_user)
-    driver.enter_user_password(password)
-    driver.click_login_button()
-    driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
+    driver.login_success()
     cart_exist = driver.element_is_present(*InventoryPageLocators.SHOPPING_CART)
     assert cart_exist, "Shopping cart image is not displayed"
+
+
+
+@pytest.mark.TC_002_04
+def test_burger_menu_options_displayed(browser):
+    driver = InventoryPage(browser, link)
+    driver.login_success()
+    driver.click_element(*InventoryPageLocators.OPEN_MENU_BUTTON)
+    all_items_exist = driver.element_is_present(*InventoryPageLocators.ALL_ITEMS_MENU_ITEM)
+    assert all_items_exist, "All items does not exist"
+    about_exists = driver.element_is_present(*InventoryPageLocators.ABOUT_MENU_ITEM)
+    assert about_exists, "About does not exist"
+    logout_exists = driver.element_is_present(*InventoryPageLocators.LOGOUT_MENU_ITEM)
+    assert logout_exists, "Logout does not exist"
+    reset_app_state_exists = driver.element_is_present(*InventoryPageLocators.RESET_APP_STATE)
+    assert reset_app_state_exists, "Reset app state does not exist"
+
