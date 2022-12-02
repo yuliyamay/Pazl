@@ -98,18 +98,20 @@ def test_cart_displayed(browser):
     assert cart_exist, "Shopping cart image is not displayed"
 
 
-
 @pytest.mark.TC_002_04
 def test_burger_menu_options_displayed(browser):
     driver = InventoryPage(browser, link)
     driver.login_success()
     driver.click_element(*InventoryPageLocators.OPEN_MENU_BUTTON)
-    all_items_exist = driver.element_is_present(*InventoryPageLocators.ALL_ITEMS_MENU_ITEM)
+    all_items_exist = driver.element_is_present(
+        *InventoryPageLocators.ALL_ITEMS_MENU_ITEM
+    )
     assert all_items_exist, "All items does not exist"
     about_exists = driver.element_is_present(*InventoryPageLocators.ABOUT_MENU_ITEM)
     assert about_exists, "About does not exist"
     logout_exists = driver.element_is_present(*InventoryPageLocators.LOGOUT_MENU_ITEM)
     assert logout_exists, "Logout does not exist"
-    reset_app_state_exists = driver.element_is_present(*InventoryPageLocators.RESET_APP_STATE)
+    reset_app_state_exists = driver.element_is_present(
+        *InventoryPageLocators.RESET_APP_STATE
+    )
     assert reset_app_state_exists, "Reset app state does not exist"
-
