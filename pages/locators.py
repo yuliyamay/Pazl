@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
+
 class LoginPageLocators:
     LOGIN_USER = (By.CSS_SELECTOR, "#user-name")
     LOGIN_PASSWORD = (By.CSS_SELECTOR, "#password")
@@ -155,6 +156,7 @@ class CartPageLocators:
     DESCRIPTION_ITEM_CART = (By.CSS_SELECTOR, ".inventory_item_desc")
     PRICE_ITEM_CART = (By.CSS_SELECTOR, ".item_pricebar")
 
+    ITEMS_IN_CART = (By.CSS_SELECTOR, ".cart_item_label")
 
 class FirstItemPageLocators:
     # https://www.saucedemo.com/inventory-item.html?id=4

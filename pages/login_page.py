@@ -28,3 +28,4 @@ class LoginPage(BasePage):
         self.enter_user_name("standard_user")
         self.enter_user_password("secret_sauce")
         self.click_login_button()
+
