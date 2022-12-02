@@ -1,10 +1,13 @@
 import time
 import pytest
-from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
 from pages.locators import InventoryPageLocators
+from helper.helpers import count_items
+from pages.locators import CartPageLocators
+import pdb
 
 link = "https://www.saucedemo.com/"
+endpoint = "inventory.html"
 
 regular_user = "standard_user"
 password = "secret_sauce"
@@ -54,3 +57,41 @@ def test_check_number_in_cart(browser):
         else:
             amount = driver.getting_amount_of_items_in_cart()
             assert int(amount) == items, "Wrong number in the cart. -"
+
+
+@pytest.mark.TC_004_04_L
+def test_check_number_in_cart1(browser):
+    driver = InventoryPage(browser, link)
+    driver.login_success()
+    assert link + endpoint == browser.current_url, "wrong url"
+
+    driver.element_is_present(*InventoryPageLocators.BACKPACK_ITEM_NAME)
+    driver.click_element(*InventoryPageLocators.BACKPACK_ADD_TO_CART_BUTTON)
+
+    driver.element_is_present(*InventoryPageLocators.FLEECE_JACKET_ITEM_NAME)
+    driver.click_element(*InventoryPageLocators.FLEECE_JACKET_ADD_TO_CART_BUTTON)
+
+    driver.element_is_present(*InventoryPageLocators.RED_SHIRT_ITEM_NAME)
+    driver.click_element(*InventoryPageLocators.RED_SHIRT_ADD_TO_CART_BUTTON)
+
+    driver.go_to_cart()
+    items_in_cart = count_items(driver.find_items_in_cart())
+    assert items_in_cart == 3, "Should be three items in cart."
+
+    driver.element_is_present(*CartPageLocators.CONTINUE_SHOPPING_BUTTON)
+    driver.click_element(*CartPageLocators.CONTINUE_SHOPPING_BUTTON)
+
+    assert link + endpoint == browser.current_url, "wrong url"
+
+    driver.element_is_present(*InventoryPageLocators.BACKPACK_ITEM_NAME)
+    driver.click_element(*InventoryPageLocators.BACKPACK_REMOVE_BUTTON)
+
+    driver.element_is_present(*InventoryPageLocators.FLEECE_JACKET_ITEM_NAME)
+    driver.click_element(*InventoryPageLocators.FLEECE_JACKET_REMOVE_BUTTON)
+
+    driver.element_is_present(*InventoryPageLocators.RED_SHIRT_ITEM_NAME)
+    driver.click_element(*InventoryPageLocators.RED_SHIRT_REMOVE_BUTTON)
+
+    driver.go_to_cart()
+    items_in_cart = count_items(driver.find_items_in_cart())
+    assert items_in_cart == 0, "Should be None items in cart."
