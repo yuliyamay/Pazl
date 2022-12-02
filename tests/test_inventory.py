@@ -7,7 +7,7 @@ from pages.locators import CartPageLocators
 import pdb
 
 link = "https://www.saucedemo.com/"
-endpoint = 'inventory.html'
+endpoint = "inventory.html"
 
 regular_user = "standard_user"
 password = "secret_sauce"
@@ -76,7 +76,7 @@ def test_check_number_in_cart1(browser):
 
     driver.go_to_cart()
     items_in_cart = count_items(driver.find_items_in_cart())
-    assert items_in_cart == 3, 'Should be three items in cart.'
+    assert items_in_cart == 3, "Should be three items in cart."
 
     driver.element_is_present(*CartPageLocators.CONTINUE_SHOPPING_BUTTON)
     driver.click_element(*CartPageLocators.CONTINUE_SHOPPING_BUTTON)
@@ -94,5 +94,4 @@ def test_check_number_in_cart1(browser):
 
     driver.go_to_cart()
     items_in_cart = count_items(driver.find_items_in_cart())
-    assert items_in_cart == 0, 'Should be None items in cart.'
-
+    assert items_in_cart == 0, "Should be None items in cart."
