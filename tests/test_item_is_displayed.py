@@ -74,8 +74,8 @@ def test_bot_displayed(browser):
 @pytest.mark.TC002_01
 def test_burger_menu_displayed(browser):
     driver = LoginPage(browser, link)
-    driver.login_success()
-    driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
+    driver.login_success(browser)
+
     burger_image_exist = driver.element_is_present(
         *InventoryPageLocators.OPEN_MENU_BUTTON
     )
@@ -85,7 +85,7 @@ def test_burger_menu_displayed(browser):
 @pytest.mark.TC002_02
 def test_logo2_displayed(browser):
     driver = LoginPage(browser, link)
-    driver.login_success()
+    driver.login_success(browser)
     logo_exist = driver.element_is_present(*InventoryPageLocators.APP_LOGO)
     assert logo_exist, "Logo is not displayed"
 
@@ -93,7 +93,7 @@ def test_logo2_displayed(browser):
 @pytest.mark.TC002_03
 def test_cart_displayed(browser):
     driver = LoginPage(browser, link)
-    driver.login_success()
+    driver.login_success(browser)
     cart_exist = driver.element_is_present(*InventoryPageLocators.SHOPPING_CART)
     assert cart_exist, "Shopping cart image is not displayed"
 
@@ -101,7 +101,7 @@ def test_cart_displayed(browser):
 @pytest.mark.TC_002_04
 def test_burger_menu_options_displayed(browser):
     driver = InventoryPage(browser, link)
-    driver.login_success()
+    driver.login_success(browser)
     driver.click_element(*InventoryPageLocators.OPEN_MENU_BUTTON)
     all_items_exist = driver.element_is_present(
         *InventoryPageLocators.ALL_ITEMS_MENU_ITEM
