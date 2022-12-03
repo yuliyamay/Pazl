@@ -1,6 +1,8 @@
 import pytest
 from pages.login_page import LoginPage
 from selenium.webdriver.common.by import By
+import time
+from pages.locators import InventoryPageLocators
 
 link = "https://www.saucedemo.com/"
 
@@ -104,3 +106,13 @@ def test_redirection_to_inventory_page(browser):
     driver = LoginPage(browser, link)
     driver.login_success(browser)
     driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
+
+
+@pytest.mark.TC_002_06
+def test_logout(browser):
+    driver = LoginPage(browser, link)
+    driver.login_success(browser)
+    driver.click_element(*InventoryPageLocators.OPEN_MENU_BUTTON)
+    time.sleep(1)
+    driver.click_element(*InventoryPageLocators.LOGOUT_MENU_ITEM)
+    driver.should_be_current_page("https://www.saucedemo.com/")
