@@ -13,7 +13,7 @@ password = "secret_sauce"
 @pytest.mark.TC_009_01
 def test_check_empty_fields(browser):
     driver = InventoryPage(browser, link)
-    driver.login_success()
+    driver.login_success(browser)
     driver.click_element(*InventoryPageLocators.SHOPPING_CART)
     driver.should_be_current_page("https://www.saucedemo.com/cart.html")
     driver.click_element(*CartPageLocators.CHECKOUT_BUTTON)

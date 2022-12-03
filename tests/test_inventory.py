@@ -7,7 +7,7 @@ from pages.locators import CartPageLocators
 import pdb
 
 link = "https://www.saucedemo.com/"
-endpoint = "inventory.html"
+endpoint = 'inventory.html'
 
 regular_user = "standard_user"
 password = "secret_sauce"
@@ -36,7 +36,6 @@ def test_check_number_in_cart(browser):
     amount = 0
     while driver.element_is_present(*InventoryPageLocators.BUTTONS_ADD_X):
         driver.click_element(*InventoryPageLocators.BUTTONS_ADD_X)
-        time.sleep(1)
         items += 1
         print(items)
 
@@ -48,7 +47,6 @@ def test_check_number_in_cart(browser):
 
     while driver.element_is_present(*InventoryPageLocators.BUTTONS_REMOVE_X):
         driver.click_element(*InventoryPageLocators.BUTTONS_REMOVE_X)
-        time.sleep(1)
         items -= 1
         print(items)
 
@@ -62,8 +60,7 @@ def test_check_number_in_cart(browser):
 @pytest.mark.TC_004_04_L
 def test_check_number_in_cart1(browser):
     driver = InventoryPage(browser, link)
-    driver.login_success()
-    assert link + endpoint == browser.current_url, "wrong url"
+    driver.login_success(browser)
 
     driver.element_is_present(*InventoryPageLocators.BACKPACK_ITEM_NAME)
     driver.click_element(*InventoryPageLocators.BACKPACK_ADD_TO_CART_BUTTON)
@@ -76,7 +73,7 @@ def test_check_number_in_cart1(browser):
 
     driver.go_to_cart()
     items_in_cart = count_items(driver.find_items_in_cart())
-    assert items_in_cart == 3, "Should be three items in cart."
+    assert items_in_cart == 3, 'Should be three items in cart.'
 
     driver.element_is_present(*CartPageLocators.CONTINUE_SHOPPING_BUTTON)
     driver.click_element(*CartPageLocators.CONTINUE_SHOPPING_BUTTON)
@@ -94,4 +91,10 @@ def test_check_number_in_cart1(browser):
 
     driver.go_to_cart()
     items_in_cart = count_items(driver.find_items_in_cart())
-    assert items_in_cart == 0, "Should be None items in cart."
+    assert items_in_cart == 0, 'Should be None items in cart.'
+
+
+
+
+
+

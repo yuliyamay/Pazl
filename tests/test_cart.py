@@ -9,7 +9,7 @@ link = "https://www.saucedemo.com/cart.html"
 @pytest.mark.TC_006_08
 def test_item_data_displayed(browser):
     driver = CartPage(browser, link)
-    driver.item_in_cart()
+    driver.item_in_cart(browser)
     qty_displayed = driver.element_is_present(*CartPageLocators.QTY_BOX)
     assert qty_displayed, "Quantity (QTY) is not displayed."
     name_displayed = driver.element_is_present(*CartPageLocators.NAME_BACKPACK_CART)
