@@ -129,6 +129,16 @@ def test_burger_menu_options_displayed(browser):
     assert reset_app_state_exists, "Reset app state does not exist"
 
 
+@pytest.mark.ТC_004_01
+def test_filter_is_present(browser):
+    driver = InventoryPage(browser, link)
+    driver.login_success(browser)
+    filter_is_present = driver.element_is_present(
+        *InventoryPageLocators.PRODUCT_SORT_FILTER
+    )
+    assert filter_is_present, "Filter button is not displayed"
+
+
 @pytest.mark.TC_002_06
 def test_header_displayed(browser):
     driver = InventoryPage(browser, link)

@@ -23,6 +23,10 @@ class InventoryPageLocators:
     SHOPPING_CART_BADGE = (By.CSS_SELECTOR, "span[class ='shopping_cart_badge'")
     PRIMARY_HEADER = (By.CSS_SELECTOR, "#header_container > div.primary_header")
 
+    INVENTORY_LIST = (By.CSS_SELECTOR, ".inventory_item")
+    INVENTORY_NAMES_LIST = (By.CSS_SELECTOR, ".inventory_item_name")
+    INVENTORY_PRICE_LIST = (By.CSS_SELECTOR, ".inventory_item_price")
+
     # BURGER MENU ITEMS
     ALL_ITEMS_MENU_ITEM = (By.CSS_SELECTOR, "#inventory_sidebar_link")
     ABOUT_MENU_ITEM = (By.CSS_SELECTOR, "#about_sidebar_link")
@@ -139,6 +143,13 @@ class InventoryPageLocators:
         By.CSS_SELECTOR,
         "button[name='remove-test.allthethings()-t-shirt-(red)']",
     )
+
+
+class FilterOptions:
+    NAME_A_Z = (By.CSS_SELECTOR, 'option[value="az"]')
+    NAME_Z_A = (By.CSS_SELECTOR, 'option[value="za"]')
+    PRICE_LOW_TO_HIGH = (By.CSS_SELECTOR, 'option[value="lohi"]')
+    PRICE_HIGH_TO_LOW = (By.CSS_SELECTOR, 'option[value="hilo"]')
 
 
 class CartPageLocators:
