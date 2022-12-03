@@ -2,7 +2,10 @@ import time
 import pytest
 from pages.inventory_page import InventoryPage
 from pages.locators import InventoryPageLocators
+from pages.locators import FilterOptions
 from helper.helpers import count_items
+from helper.helpers import make_list
+
 from pages.locators import CartPageLocators
 import logging
 
@@ -95,17 +98,43 @@ def test_check_number_in_cart(browser):
     assert items_in_cart == 0, "Should be None items in cart."
 
 
-# @pytest.mark.filter
-# def test_filter_is_present(browser):
-#     driver = InventoryPage(browser, link)
-#     driver.login_success(browser)
-#     driver.element_is_present()
-#
-#
-# @pytest.mark.ТC_004_01_L
-# def test_verify_different_types_of_sorting(browser):
-#     driver = InventoryPage(browser, link)
-#     driver.login_success(browser)
-#
-#
-#     # product_items_on_inventory_page = browser.find_elements(*)
+@pytest.mark.ТC_004_01
+@pytest.mark.parametrize(
+    "locator_filter,locator_items,reverse_mark, convert_to_number",
+    [
+        (
+                FilterOptions.NAME_A_Z,
+                InventoryPageLocators.INVENTORY_NAMES_LIST,
+                False,
+                False),
+        pytest.param(FilterOptions.NAME_Z_A,
+                     InventoryPageLocators.INVENTORY_NAMES_LIST,
+                     True,
+                     False,
+                     marks=pytest.mark.z_a),
+        pytest.param(FilterOptions.PRICE_LOW_TO_HIGH,
+                     InventoryPageLocators.INVENTORY_PRICE_LIST,
+                     False,
+                     True,
+                     marks=pytest.mark.l_h,
+                     id="price_l_h"),
+        pytest.param(FilterOptions.PRICE_HIGH_TO_LOW,
+                     InventoryPageLocators.INVENTORY_PRICE_LIST,
+                     True,
+                     True,
+                     # marks=[pytest.mark.h_l, pytest.mark.xfail],
+                     id="price_h_l"
+                     ),
+    ],
+)
+def test_verify_different_types_of_sorting\
+                (locator_filter, locator_items, reverse_mark, convert_to_number, browser):
+
+    driver = InventoryPage(browser, link)
+    driver.login_success(browser)
+
+    driver.click_element(*locator_filter)
+    items_on_page = make_list(browser.find_elements(*locator_items), convert_to_number)
+    items_filtered = sorted(items_on_page, reverse=reverse_mark)
+    assert items_on_page == items_filtered, 'Items are not sorted by name.'
+
