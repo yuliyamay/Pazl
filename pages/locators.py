@@ -23,10 +23,6 @@ class InventoryPageLocators:
     SHOPPING_CART_BADGE = (By.CSS_SELECTOR, "span[class ='shopping_cart_badge'")
     PRIMARY_HEADER = (By.CSS_SELECTOR, "#header_container > div.primary_header")
 
-    INVENTORY_LIST = (By.CSS_SELECTOR, '.inventory_item')
-    INVENTORY_NAMES_LIST = (By.CSS_SELECTOR, '.inventory_item_name')
-    INVENTORY_PRICE_LIST = (By.CSS_SELECTOR, '.inventory_item_price')
-
     # BURGER MENU ITEMS
     ALL_ITEMS_MENU_ITEM = (By.CSS_SELECTOR, "#inventory_sidebar_link")
     ABOUT_MENU_ITEM = (By.CSS_SELECTOR, "#about_sidebar_link")
@@ -49,6 +45,12 @@ class InventoryPageLocators:
     """ SELLING ITEMS """
     BUTTONS_ADD_X = (By.XPATH, '//button[text()="Add to cart"]')
     BUTTONS_REMOVE_X = (By.XPATH, '//button[text()="Remove"]')
+
+
+    INVENTORY_LIST = (By.CSS_SELECTOR, '.inventory_item')
+    INVENTORY_NAMES_LIST = (By.CSS_SELECTOR, '.inventory_item_name')
+    INVENTORY_PRICE_LIST = (By.CSS_SELECTOR, '.inventory_item_price')
+    BTN_BACK_TO_PRODUCT = (By.CSS_SELECTOR, "button[name='back-to-products']")
 
     # FIRST ITEM
     BACKPACK_ITEM_NAME = (

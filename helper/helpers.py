@@ -15,6 +15,3 @@ def make_list(items, numbers=False):
             lst_items.append(float(item.text.replace('$', '')))
 
     return lst_items
-
-
-
