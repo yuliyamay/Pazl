@@ -4,7 +4,7 @@ from pages.inventory_page import InventoryPage
 from pages.locators import InventoryPageLocators
 from helper.helpers import count_items
 from pages.locators import CartPageLocators
-import pdb
+import logging
 
 link = "https://www.saucedemo.com/"
 endpoint = "inventory.html"
@@ -58,7 +58,8 @@ def test_check_number_in_cart(browser):
 
 
 @pytest.mark.TC_004_04_L
-def test_check_number_in_cart1(browser):
+def test_check_number_in_cart(browser):
+    logging.info(f'test_check_number_in_cart')
     driver = InventoryPage(browser, link)
     driver.login_success(browser)
 
@@ -92,3 +93,19 @@ def test_check_number_in_cart1(browser):
     driver.go_to_cart()
     items_in_cart = count_items(driver.find_items_in_cart())
     assert items_in_cart == 0, "Should be None items in cart."
+
+
+# @pytest.mark.filter
+# def test_filter_is_present(browser):
+#     driver = InventoryPage(browser, link)
+#     driver.login_success(browser)
+#     driver.element_is_present()
+#
+#
+# @pytest.mark.ТC_004_01_L
+# def test_verify_different_types_of_sorting(browser):
+#     driver = InventoryPage(browser, link)
+#     driver.login_success(browser)
+#
+#
+#     # product_items_on_inventory_page = browser.find_elements(*)
