@@ -159,7 +159,6 @@ class CartPageLocators:
     ITEMS_IN_CART = (By.CSS_SELECTOR, ".cart_item_label")
 
 
-
 class FirstItemPageLocators:
     # https://www.saucedemo.com/inventory-item.html?id=4
     INVENTORY_DETAILS_IMG_FIRST_ITEM = (By.CSS_SELECTOR, ".inventory_details_img")

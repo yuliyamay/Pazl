@@ -15,6 +15,7 @@ link = "https://www.saucedemo.com/"
 regular_user = "standard_user"
 password = "secret_sauce"
 
+
 @pytest.mark.TC003_02
 def test_footer_item_displayed(browser):
     driver = LoginPage(browser, link)
@@ -132,11 +133,15 @@ def test_header_displayed(browser):
     driver.click_element(*InventoryPageLocators.BACKPACK_ADD_TO_CART_BUTTON)
     driver.click_element(*InventoryPageLocators.SHOPPING_CART)
     driver.should_be_current_page("https://www.saucedemo.com/cart.html")
-    header_cart_page_displayed = driver.element_is_present(*CartPageLocators.SECONDARY_HEADER)
+    header_cart_page_displayed = driver.element_is_present(
+        *CartPageLocators.SECONDARY_HEADER
+    )
     assert header_cart_page_displayed, "Header is not displayed"
     driver.click_element(*CartPageLocators.CHECKOUT_BUTTON)
     driver.should_be_current_page("https://www.saucedemo.com/checkout-step-one.html")
-    header_checkout_displayed = driver.element_is_present(*CheckOutYourInformationPage.PRIMARY_HEADER)
+    header_checkout_displayed = driver.element_is_present(
+        *CheckOutYourInformationPage.PRIMARY_HEADER
+    )
     assert header_checkout_displayed, "Header is not displayed"
     # driver.keyboard_input(*CheckOutYourInformationPage.CHECKOUT_FIRST_NAME, "John") (Other way)
     driver.keyboard_input(By.CSS_SELECTOR, "#first-name", "John")
@@ -145,9 +150,13 @@ def test_header_displayed(browser):
     time.sleep(1)
     driver.click_element(*CheckOutYourInformationPage.CONTINUE_BUTTON)
     driver.should_be_current_page("https://www.saucedemo.com/checkout-step-two.html")
-    header_overview_page = driver.element_is_present(*CheckOutOverviewPage.HEADER_OVERVIEW)
+    header_overview_page = driver.element_is_present(
+        *CheckOutOverviewPage.HEADER_OVERVIEW
+    )
     assert header_overview_page, "Header is not displayed"
     driver.click_element(*CheckOutOverviewPage.FINISH_BUTTON)
     driver.should_be_current_page("https://www.saucedemo.com/checkout-complete.html")
-    header_checkout_complete_page = driver.element_is_present(*CheckOutCompletePage.HEADER_COMPLETE_PAGE)
+    header_checkout_complete_page = driver.element_is_present(
+        *CheckOutCompletePage.HEADER_COMPLETE_PAGE
+    )
     assert header_checkout_complete_page, "Header is not displayed"
