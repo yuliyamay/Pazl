@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import pytest
-import time
-from pages.login_page import LoginPage
-from pages.locators import *
-=======
 import time
 
 import pytest
@@ -15,27 +9,20 @@ from pages.locators import CartPageLocators
 from pages.locators import CheckOutYourInformationPage
 from selenium.webdriver.common.by import By
 
->>>>>>> main
-
 link = "https://www.saucedemo.com/"
 
 regular_user = "standard_user"
 password = "secret_sauce"
 
-<<<<<<< HEAD
-@pytest.mark.TC_004_03
-def test_verify_items_added_to_shopping_cart(browser):
-=======
 
 @pytest.mark.TC003_02
 def test_footer_item_displayed(browser):
->>>>>>> main
     driver = LoginPage(browser, link)
     driver.open_main_page()
     driver.enter_user_name(regular_user)
     driver.enter_user_password(password)
     driver.click_login_button()
-<<<<<<< HEAD
+
     driver.click_element(*InventoryPageLocators.BACKPACK_ADD_TO_CART_BUTTON)
     driver.click_element(*InventoryPageLocators.BIKE_LIGHT_ADD_TO_CART_BUTTON)
     driver.click_element(*InventoryPageLocators.BOLT_TSHIRT_ADD_TO_CART_BUTTON)
@@ -43,8 +30,6 @@ def test_footer_item_displayed(browser):
     shopping_cart = driver.element_is_present(*InventoryPageLocators.SHOPPING_CART)
     assert shopping_cart
 
-
-=======
     driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
     # footer_exist = driver.element_is_present(*InventoryPageLocators.FOOTER_SECTION)
     # assert footer_exist, "footer section is not displayed ."
@@ -182,4 +167,3 @@ def test_header_displayed(browser):
         *CheckOutCompletePage.HEADER_COMPLETE_PAGE
     )
     assert header_checkout_complete_page, "Header is not displayed"
->>>>>>> main

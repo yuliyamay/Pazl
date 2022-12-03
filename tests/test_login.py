@@ -198,7 +198,7 @@ def test_user_is_redirected_to_inventory_page_from_cart_page(browser):
     driver.enter_user_password(password)
     driver.click_login_button()
     driver.click_element(*InventoryPageLocators.SHOPPING_CART)
-    driver.click_element(*YourCartPage.CONTINUE_SHOPPING_BUTTON)
+    driver.click_element(*CartPageLocators.CONTINUE_SHOPPING_BUTTON)
     driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
 
 
@@ -210,7 +210,7 @@ def test_user_is_redirected_to_cart_page_from_check_your_info_page(browser):
     driver.enter_user_password(password)
     driver.click_login_button()
     driver.click_element(*InventoryPageLocators.SHOPPING_CART)
-    driver.click_element(*YourCartPage.CHECKOUT_BUTTON)
+    driver.click_element(*CartPageLocators.CHECKOUT_BUTTON)
     driver.click_element(*CheckOutYourInformationPage.CANCEL_BUTTON)
     driver.should_be_current_page("https://www.saucedemo.com/cart.html")
 
