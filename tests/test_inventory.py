@@ -59,7 +59,7 @@ def test_check_number_in_cart(browser):
 
 @pytest.mark.TC_004_04_L
 def test_check_number_in_cart(browser):
-    logging.info(f'test_check_number_in_cart')
+    logging.info(f"test_check_number_in_cart")
     driver = InventoryPage(browser, link)
     driver.login_success(browser)
 
