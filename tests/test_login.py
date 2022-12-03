@@ -97,3 +97,11 @@ def test_login_locked_out_user(browser):
     assert (
         error_text == "Epic sadface: Sorry, this user has been locked out."
     ), "wrong warning text"
+
+
+
+@pytest.mark.TC_001_21_03
+def test_redirection_to_inventory_page(browser):
+    driver = LoginPage(browser, link)
+    driver.login_success(browser)
+    driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
