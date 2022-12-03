@@ -23,9 +23,9 @@ class InventoryPageLocators:
     SHOPPING_CART_BADGE = (By.CSS_SELECTOR, "span[class ='shopping_cart_badge'")
     PRIMARY_HEADER = (By.CSS_SELECTOR, "#header_container > div.primary_header")
 
-    INVENTORY_LIST = (By.CSS_SELECTOR, '.inventory_item')
-    INVENTORY_NAMES_LIST = (By.CSS_SELECTOR, '.inventory_item_name')
-    INVENTORY_PRICE_LIST = (By.CSS_SELECTOR, '.inventory_item_price')
+    INVENTORY_LIST = (By.CSS_SELECTOR, ".inventory_item")
+    INVENTORY_NAMES_LIST = (By.CSS_SELECTOR, ".inventory_item_name")
+    INVENTORY_PRICE_LIST = (By.CSS_SELECTOR, ".inventory_item_price")
 
     # BURGER MENU ITEMS
     ALL_ITEMS_MENU_ITEM = (By.CSS_SELECTOR, "#inventory_sidebar_link")

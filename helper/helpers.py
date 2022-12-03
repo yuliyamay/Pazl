@@ -12,9 +12,6 @@ def make_list(items, numbers=False):
         if not numbers:
             lst_items.append(item.text)
         else:
-            lst_items.append(float(item.text.replace('$', '')))
+            lst_items.append(float(item.text.replace("$", "")))
 
     return lst_items
-
-
-

@@ -103,32 +103,39 @@ def test_check_number_in_cart(browser):
     "locator_filter,locator_items,reverse_mark, convert_to_number",
     [
         (
-                FilterOptions.NAME_A_Z,
-                InventoryPageLocators.INVENTORY_NAMES_LIST,
-                False,
-                False),
-        pytest.param(FilterOptions.NAME_Z_A,
-                     InventoryPageLocators.INVENTORY_NAMES_LIST,
-                     True,
-                     False,
-                     marks=pytest.mark.z_a),
-        pytest.param(FilterOptions.PRICE_LOW_TO_HIGH,
-                     InventoryPageLocators.INVENTORY_PRICE_LIST,
-                     False,
-                     True,
-                     marks=pytest.mark.l_h,
-                     id="price_l_h"),
-        pytest.param(FilterOptions.PRICE_HIGH_TO_LOW,
-                     InventoryPageLocators.INVENTORY_PRICE_LIST,
-                     True,
-                     True,
-                     # marks=[pytest.mark.h_l, pytest.mark.xfail],
-                     id="price_h_l"
-                     ),
+            FilterOptions.NAME_A_Z,
+            InventoryPageLocators.INVENTORY_NAMES_LIST,
+            False,
+            False,
+        ),
+        pytest.param(
+            FilterOptions.NAME_Z_A,
+            InventoryPageLocators.INVENTORY_NAMES_LIST,
+            True,
+            False,
+            marks=pytest.mark.z_a,
+        ),
+        pytest.param(
+            FilterOptions.PRICE_LOW_TO_HIGH,
+            InventoryPageLocators.INVENTORY_PRICE_LIST,
+            False,
+            True,
+            marks=pytest.mark.l_h,
+            id="price_l_h",
+        ),
+        pytest.param(
+            FilterOptions.PRICE_HIGH_TO_LOW,
+            InventoryPageLocators.INVENTORY_PRICE_LIST,
+            True,
+            True,
+            # marks=[pytest.mark.h_l, pytest.mark.xfail],
+            id="price_h_l",
+        ),
     ],
 )
-def test_verify_different_types_of_sorting\
-                (locator_filter, locator_items, reverse_mark, convert_to_number, browser):
+def test_verify_different_types_of_sorting(
+    locator_filter, locator_items, reverse_mark, convert_to_number, browser
+):
 
     driver = InventoryPage(browser, link)
     driver.login_success(browser)
@@ -136,5 +143,4 @@ def test_verify_different_types_of_sorting\
     driver.click_element(*locator_filter)
     items_on_page = make_list(browser.find_elements(*locator_items), convert_to_number)
     items_filtered = sorted(items_on_page, reverse=reverse_mark)
-    assert items_on_page == items_filtered, 'Items are not sorted by name.'
-
+    assert items_on_page == items_filtered, "Items are not sorted by name."
