@@ -65,7 +65,6 @@ def test_open_linkedin_page(browser):
     driver.should_be_current_page("https://www.linkedin.com/company/sauce-labs/")
 
 
-
 @pytest.mark.TC_002_05
 def test_about_link(browser):
     driver = InventoryPage(browser, link)

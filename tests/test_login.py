@@ -28,9 +28,7 @@ def test_login_without_password(browser):
     driver.enter_user_name(regular_user)
     driver.click_login_button()
     error_text = driver.getting_error_text()
-    assert (
-            error_text == "Epic sadface: Password is required"
-    ), "wrong warning text"
+    assert error_text == "Epic sadface: Password is required", "wrong warning text"
 
 
 @pytest.mark.TC001_01
@@ -42,8 +40,9 @@ def test_login_invalid_username(browser):
     driver.click_login_button()
     error_text = driver.getting_error_text()
     assert (
-            error_text == "Epic sadface: Username and password do not "
-                          "match any user in this service"), "wrong warning text"
+        error_text == "Epic sadface: Username and password do not "
+        "match any user in this service"
+    ), "wrong warning text"
 
 
 @pytest.mark.TC001_03
@@ -52,9 +51,7 @@ def test_login_empty_fields(browser):
     driver.open_main_page()
     driver.click_login_button()
     error_text = driver.getting_error_text()
-    assert (
-            error_text == "Epic sadface: Username is required"
-    ), "wrong warning text"
+    assert error_text == "Epic sadface: Username is required", "wrong warning text"
 
 
 @pytest.mark.TC_001_10
@@ -98,8 +95,8 @@ def test_login_with_invalid_password(browser):
     driver.click_login_button()
     error_text = driver.getting_error_text()
     assert (
-            error_text
-            == "Epic sadface: Username and password do not match any user in this service"
+        error_text
+        == "Epic sadface: Username and password do not match any user in this service"
     ), "wrong warning text"
 
     fileName = str(round(time.time() * 1000)) + ".png"
@@ -161,7 +158,7 @@ def test_login_invalid_username(browser):
     driver.open_main_page()
     driver.click_login_button()
     error_text = driver.getting_error_text()
-    assert error_text == 'Epic sadface: Username is required', "wrong warning text"
+    assert error_text == "Epic sadface: Username is required", "wrong warning text"
 
 
 @pytest.mark.TC_999_12
@@ -222,10 +219,4 @@ def test_error_message_if_username_field_empty(browser):
     driver.enter_user_password(password)
     driver.click_login_button()
     error_text = driver.getting_error_text()
-    assert error_text == 'Epic sadface: Username is required', "wrong warning text"
-
-
-
-
-
-
+    assert error_text == "Epic sadface: Username is required", "wrong warning text"
