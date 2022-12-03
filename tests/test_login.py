@@ -99,7 +99,6 @@ def test_login_locked_out_user(browser):
     ), "wrong warning text"
 
 
-
 @pytest.mark.TC_001_21_03
 def test_redirection_to_inventory_page(browser):
     driver = LoginPage(browser, link)

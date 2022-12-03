@@ -10,7 +10,6 @@ regular_user = "standard_user"
 password = "secret_sauce"
 
 
-
 @pytest.mark.TC_002_05
 def test_about_link(browser):
     driver = InventoryPage(browser, link)
