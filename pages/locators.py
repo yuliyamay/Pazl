@@ -50,6 +50,8 @@ class InventoryPageLocators:
     BUTTONS_ADD_X = (By.XPATH, '//button[text()="Add to cart"]')
     BUTTONS_REMOVE_X = (By.XPATH, '//button[text()="Remove"]')
 
+    BTN_BACK_TO_PRODUCT = (By.CSS_SELECTOR, "button[name = 'back-to-products']")
+
     # FIRST ITEM
     BACKPACK_ITEM_NAME = (
         By.XPATH,
