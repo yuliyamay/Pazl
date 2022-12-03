@@ -9,7 +9,6 @@ from pages.locators import CartPageLocators
 from pages.locators import CheckOutYourInformationPage
 from selenium.webdriver.common.by import By
 
-
 link = "https://www.saucedemo.com/"
 
 regular_user = "standard_user"
@@ -23,6 +22,14 @@ def test_footer_item_displayed(browser):
     driver.enter_user_name(regular_user)
     driver.enter_user_password(password)
     driver.click_login_button()
+
+    driver.click_element(*InventoryPageLocators.BACKPACK_ADD_TO_CART_BUTTON)
+    driver.click_element(*InventoryPageLocators.BIKE_LIGHT_ADD_TO_CART_BUTTON)
+    driver.click_element(*InventoryPageLocators.BOLT_TSHIRT_ADD_TO_CART_BUTTON)
+    time.sleep(4)
+    shopping_cart = driver.element_is_present(*InventoryPageLocators.SHOPPING_CART)
+    assert shopping_cart
+
     driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
     # footer_exist = driver.element_is_present(*InventoryPageLocators.FOOTER_SECTION)
     # assert footer_exist, "footer section is not displayed ."
