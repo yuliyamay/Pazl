@@ -69,6 +69,24 @@ def test_fourth_item_back_to_product(browser):
     driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
 
 
+@pytest.mark.TC_003_05
+# @pytest.mark.xfail
+def test_open_facebook_page(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    driver.enter_user_name(regular_user)
+    driver.enter_user_password(password)
+    driver.click_login_button()
+    parentHandle = browser.current_window_handle
+    # print("Parent Handle: " + parentHandle)
+    driver.click_element(*InventoryPageLocators.FACEBOOK_IMAGE_LINK)
+    handles = browser.window_handles
+    # print("List of handles: ", handles)
+    # time.sleep(3)
+    for handle in handles:
+        if handle not in parentHandle:
+            browser.switch_to.window(handle)
+    driver.should_be_current_page("https://www.facebook.com/saucelabs")
 
 
 @pytest.mark.TC_001_02
@@ -99,13 +117,46 @@ def test_login_with_invalid_password(browser):
 def test_password_field_exists(browser):
     driver = LoginPage(browser, link)
     driver.open_main_page()
-    password_field_exists= driver.element_is_present(*LoginPageLocators.LOGIN_PASSWORD)
-    assert password_field_exists, "Password field is not displayed"
+    # password_field = driver.element_is_present(*LoginPageLocators.LOGIN_PASSWORD)
+    password_field = browser.find_element(By.CSS_SELECTOR, "#password")
+    if password_field is not None:
+        print("element is displayed")
 
+
+@pytest.mark.TC_003_04
+def test_open_facebook_page(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    driver.enter_user_name(regular_user)
+    driver.enter_user_password(password)
+    driver.click_login_button()
+    parentHandle = browser.current_window_handle
+    driver.click_element(*InventoryPageLocators.TWITTER_IMAGE_LINK)
+    handles = browser.window_handles
+    for handle in handles:
+        if handle not in parentHandle:
+            browser.switch_to.window(handle)
+    driver.should_be_current_page("https://twitter.com/saucelabs")
+
+
+@pytest.mark.TC_003_06
+def test_open_facebook_page(browser):
+    driver = LoginPage(browser, link)
+    driver.open_main_page()
+    driver.enter_user_name(regular_user)
+    driver.enter_user_password(password)
+    driver.click_login_button()
+    parentHandle = browser.current_window_handle
+    driver.click_element(*InventoryPageLocators.LINKEDIN_IMAGE_LINK)
+    handles = browser.window_handles
+    for handle in handles:
+        if handle not in parentHandle:
+            browser.switch_to.window(handle)
+    driver.should_be_current_page("https://www.linkedin.com/company/sauce-labs/")
 
 
 @pytest.mark.TC_001_24
-def test_username_is_required(browser):
+def test_login_invalid_username(browser):
     driver = LoginPage(browser, link)
     driver.open_main_page()
     driver.click_login_button()

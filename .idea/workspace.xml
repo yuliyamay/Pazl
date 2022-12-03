@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c634186-ca12-40c6-96ce-84457ca21174" name="Changes" comment="added folder 'tests'">
+    <list default="true" id="9c634186-ca12-40c6-96ce-84457ca21174" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,22 +25,35 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2HB5MAAhdC7mobmiWTVIFo4kgyB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/laysa/PycharmProjects/Pazl&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python tests.Python tests for test_item_is_displayed.test_logo_displayed">
-    <configuration name="Python tests for test_item_is_displayed.test_bot_displayed" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for test_social_media_link.test_about_link">
+    <configuration name="Python tests for test_inventory.test_check_number_in_cart" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Pazl" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -49,11 +63,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_item_is_displayed.test_bot_displayed&quot;" />
+      <option name="_new_target" value="&quot;test_inventory.test_check_number_in_cart&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_item_is_displayed.test_login_button_displayed" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_item_is_displayed.test_cart_displayed" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Pazl" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -63,11 +77,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_item_is_displayed.test_login_button_displayed&quot;" />
+      <option name="_new_target" value="&quot;test_item_is_displayed.test_cart_displayed&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_item_is_displayed.test_loginbutton_displayed" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_item_is_displayed.test_logo2_displayed" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Pazl" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -77,11 +91,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_item_is_displayed.test_loginbutton_displayed&quot;" />
+      <option name="_new_target" value="&quot;test_item_is_displayed.test_logo2_displayed&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_item_is_displayed.test_logo_displayed" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_login.test_redirection_to_inventory_page" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Pazl" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -91,23 +105,38 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_item_is_displayed.test_logo_displayed&quot;" />
+      <option name="_new_target" value="&quot;test_login.test_redirection_to_inventory_page&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_social_media_link.test_about_link" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Pazl" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_social_media_link.test_about_link&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_logo_displayed" />
-        <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_bot_displayed" />
-        <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_login_button_displayed" />
-        <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_loginbutton_displayed" />
+        <item itemvalue="Python tests.Python tests for test_social_media_link.test_about_link" />
+        <item itemvalue="Python tests.Python tests for test_login.test_redirection_to_inventory_page" />
+        <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_logo2_displayed" />
+        <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_cart_displayed" />
+        <item itemvalue="Python tests.Python tests for test_inventory.test_check_number_in_cart" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9c634186-ca12-40c6-96ce-84457ca21174" name="Changes" comment="" />
+      <changelist id="9c634186-ca12-40c6-96ce-84457ca21174" name="Changes" comment="allure-report.yaml" />
       <created>1667745586699</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -120,14 +149,77 @@
       <option name="project" value="LOCAL" />
       <updated>1667783468020</updated>
     </task>
-    <task id="LOCAL-00002" summary="added folder 'tests'">
-      <created>1669343519240</created>
+    <task id="LOCAL-00002" summary="New tests">
+      <created>1669348334651</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1669343519240</updated>
+      <updated>1669348334651</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="New tests">
+      <created>1669350616359</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669350616359</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added more tests">
+      <created>1669351697349</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669351697349</updated>
+    </task>
+    <task id="LOCAL-00005" summary="yml changes">
+      <created>1669688363180</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669688363180</updated>
+    </task>
+    <task id="LOCAL-00006" summary="yml changes">
+      <created>1669689090327</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669689090327</updated>
+    </task>
+    <task id="LOCAL-00007" summary="yml changes">
+      <created>1669689585149</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669689585149</updated>
+    </task>
+    <task id="LOCAL-00008" summary="yml changes">
+      <created>1669689718133</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669689718133</updated>
+    </task>
+    <task id="LOCAL-00009" summary="yml changes">
+      <created>1669689815093</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669689815093</updated>
+    </task>
+    <task id="LOCAL-00010" summary="yml changes">
+      <created>1670029099311</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670029099311</updated>
+    </task>
+    <task id="LOCAL-00011" summary="New test">
+      <created>1670092835138</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670092835138</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,6 +235,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added folder 'tests'" />
-    <option name="LAST_COMMIT_MESSAGE" value="added folder 'tests'" />
+    <MESSAGE value="New tests" />
+    <MESSAGE value="Added more tests" />
+    <MESSAGE value="yml changes" />
+    <MESSAGE value="commit" />
+    <MESSAGE value="New test" />
+    <option name="LAST_COMMIT_MESSAGE" value="New test" />
   </component>
 </project>
