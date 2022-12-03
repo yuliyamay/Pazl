@@ -46,10 +46,9 @@ class InventoryPageLocators:
     BUTTONS_ADD_X = (By.XPATH, '//button[text()="Add to cart"]')
     BUTTONS_REMOVE_X = (By.XPATH, '//button[text()="Remove"]')
 
-
-    INVENTORY_LIST = (By.CSS_SELECTOR, '.inventory_item')
-    INVENTORY_NAMES_LIST = (By.CSS_SELECTOR, '.inventory_item_name')
-    INVENTORY_PRICE_LIST = (By.CSS_SELECTOR, '.inventory_item_price')
+    INVENTORY_LIST = (By.CSS_SELECTOR, ".inventory_item")
+    INVENTORY_NAMES_LIST = (By.CSS_SELECTOR, ".inventory_item_name")
+    INVENTORY_PRICE_LIST = (By.CSS_SELECTOR, ".inventory_item_price")
     BTN_BACK_TO_PRODUCT = (By.CSS_SELECTOR, "button[name='back-to-products']")
 
     # FIRST ITEM

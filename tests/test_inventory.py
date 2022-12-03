@@ -134,7 +134,8 @@ def test_check_number_in_cart(browser):
     ],
 )
 def test_verify_different_types_of_sorting(
-        locator_filter, locator_items, reverse_mark, convert_to_number, browser):
+    locator_filter, locator_items, reverse_mark, convert_to_number, browser
+):
 
     driver = InventoryPage(browser, link)
     driver.login_success(browser)
@@ -142,7 +143,7 @@ def test_verify_different_types_of_sorting(
     driver.click_element(*locator_filter)
     items_on_page = make_list(browser.find_elements(*locator_items), convert_to_number)
     items_filtered = sorted(items_on_page, reverse=reverse_mark)
-    assert items_on_page == items_filtered, 'Items are not sorted.'
+    assert items_on_page == items_filtered, "Items are not sorted."
 
 
 @pytest.mark.TC_999_09
