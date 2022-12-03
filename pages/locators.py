@@ -21,6 +21,7 @@ class InventoryPageLocators:
     APP_LOGO = (By.CSS_SELECTOR, ".app_logo")
     SHOPPING_CART = (By.CSS_SELECTOR, ".shopping_cart_link")
     SHOPPING_CART_BADGE = (By.CSS_SELECTOR, "span[class ='shopping_cart_badge'")
+    PRIMARY_HEADER = (By.CSS_SELECTOR, "#header_container > div.primary_header")
 
     # BURGER MENU ITEMS
     ALL_ITEMS_MENU_ITEM = (By.CSS_SELECTOR, "#inventory_sidebar_link")
@@ -142,6 +143,7 @@ class InventoryPageLocators:
 
 class CartPageLocators:
     # SECONDARY HEADER
+    SECONDARY_HEADER = (By.CSS_SELECTOR, "#header_container > div.primary_header")
     SECONDARY_HEADER_TITLE = (By.CSS_SELECTOR, ".title")
     CONTINUE_SHOPPING_BUTTON = (By.CSS_SELECTOR, "#continue-shopping")
     CHECKOUT_BUTTON = (By.CSS_SELECTOR, "#checkout")
@@ -154,7 +156,6 @@ class CartPageLocators:
     NAME_JACKET_CART = (By.CSS_SELECTOR, "#item_5_title_link")
     DESCRIPTION_ITEM_CART = (By.CSS_SELECTOR, ".inventory_item_desc")
     PRICE_ITEM_CART = (By.CSS_SELECTOR, ".item_pricebar")
-
     ITEMS_IN_CART = (By.CSS_SELECTOR, ".cart_item_label")
 
 
@@ -251,10 +252,12 @@ class CheckOutYourInformationPage:
     ZIP_CODE_FIELD = (By.CSS_SELECTOR, "#postal-code")
     CANCEL_BUTTON = (By.CSS_SELECTOR, "#cancel")
     CONTINUE_BUTTON = (By.CSS_SELECTOR, "#continue")
+    PRIMARY_HEADER = (By.CSS_SELECTOR, "#header_container")
 
 
 class CheckOutOverviewPage:
     # https: // www.saucedemo.com / checkout - step - two.html
+    HEADER_OVERVIEW = (By.CSS_SELECTOR, "#header_container")
     CHECKOUT_OVERVIEW_TEXT = (By.CSS_SELECTOR, ".title")
     QUANTITY_LABEL = (By.CSS_SELECTOR, ".cart_quantity_label")
     DESCRIPTION_LABEL = (By.CSS_SELECTOR, ".cart_desc_label")
@@ -278,3 +281,4 @@ class CheckOutCompletePage:
     THANK_YOU_LABEL = (By.CSS_SELECTOR, "complete-header")
     YOUR_ORDER_DISPATCHED_LABEL = (By.CSS_SELECTOR, ".complete-text")
     BACK_HOME_BUTTON = (By.CSS_SELECTOR, "#back-to-products")
+    HEADER_COMPLETE_PAGE = (By.CSS_SELECTOR, "#header_container")

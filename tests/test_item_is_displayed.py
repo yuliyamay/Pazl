@@ -1,9 +1,14 @@
-import pytest
+import time
 
+import pytest
 from pages.inventory_page import InventoryPage
 from pages.login_page import LoginPage
-from pages.locators import LoginPageLocators
+from pages.locators import LoginPageLocators, CheckOutOverviewPage, CheckOutCompletePage
 from pages.locators import InventoryPageLocators
+from pages.locators import CartPageLocators
+from pages.locators import CheckOutYourInformationPage
+from selenium.webdriver.common.by import By
+
 
 link = "https://www.saucedemo.com/"
 
@@ -115,3 +120,43 @@ def test_burger_menu_options_displayed(browser):
         *InventoryPageLocators.RESET_APP_STATE
     )
     assert reset_app_state_exists, "Reset app state does not exist"
+
+
+@pytest.mark.TC_002_06
+def test_header_displayed(browser):
+    driver = InventoryPage(browser, link)
+    driver.open_main_page()
+    driver.enter_user_name(regular_user)
+    driver.enter_user_password(password)
+    driver.click_login_button()
+    driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
+    driver.click_element(*InventoryPageLocators.BACKPACK_ADD_TO_CART_BUTTON)
+    driver.click_element(*InventoryPageLocators.SHOPPING_CART)
+    driver.should_be_current_page("https://www.saucedemo.com/cart.html")
+    header_cart_page_displayed = driver.element_is_present(
+        *CartPageLocators.SECONDARY_HEADER
+    )
+    assert header_cart_page_displayed, "Header is not displayed"
+    driver.click_element(*CartPageLocators.CHECKOUT_BUTTON)
+    driver.should_be_current_page("https://www.saucedemo.com/checkout-step-one.html")
+    header_checkout_displayed = driver.element_is_present(
+        *CheckOutYourInformationPage.PRIMARY_HEADER
+    )
+    assert header_checkout_displayed, "Header is not displayed"
+    # driver.keyboard_input(*CheckOutYourInformationPage.CHECKOUT_FIRST_NAME, "John") (Other way)
+    driver.keyboard_input(By.CSS_SELECTOR, "#first-name", "John")
+    driver.keyboard_input(By.CSS_SELECTOR, "#last-name", "Smith")
+    driver.keyboard_input(By.CSS_SELECTOR, "#postal-code", "61007")
+    time.sleep(1)
+    driver.click_element(*CheckOutYourInformationPage.CONTINUE_BUTTON)
+    driver.should_be_current_page("https://www.saucedemo.com/checkout-step-two.html")
+    header_overview_page = driver.element_is_present(
+        *CheckOutOverviewPage.HEADER_OVERVIEW
+    )
+    assert header_overview_page, "Header is not displayed"
+    driver.click_element(*CheckOutOverviewPage.FINISH_BUTTON)
+    driver.should_be_current_page("https://www.saucedemo.com/checkout-complete.html")
+    header_checkout_complete_page = driver.element_is_present(
+        *CheckOutCompletePage.HEADER_COMPLETE_PAGE
+    )
+    assert header_checkout_complete_page, "Header is not displayed"
