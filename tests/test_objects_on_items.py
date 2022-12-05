@@ -1,5 +1,6 @@
 import pytest
 from pages.inventory_page import InventoryPage
+from pages.cart_page import CartPage
 from pages.locators import InventoryPageLocators
 
 link = "https://www.saucedemo.com/"

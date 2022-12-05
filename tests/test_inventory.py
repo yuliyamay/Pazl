@@ -2,9 +2,11 @@ import time
 import pytest
 from pages.inventory_page import InventoryPage
 from pages.locators import InventoryPageLocators
+from pages.locators import CartPageLocators
 from pages.locators import FilterOptions
 from helper.helpers import count_items
 from helper.helpers import make_list
+from pages.cart_page import CartPage
 
 from pages.locators import CartPageLocators
 import logging
@@ -141,7 +143,7 @@ def test_verify_different_types_of_sorting(
     driver.login_success(browser)
 
     driver.click_element(*locator_filter)
-    items_on_page = make_list(browser.find_elements(*locator_items), convert_to_number)
+    items_on_page = make_list(browser.find_elements(*locator_items), numbers=convert_to_number)
     items_filtered = sorted(items_on_page, reverse=reverse_mark)
     assert items_on_page == items_filtered, "Items are not sorted."
 
@@ -154,3 +156,9 @@ def test_verify_button_back_to_product(browser):
     driver.click_element(*InventoryPageLocators.BOLT_TSHIRT_ITEM_NAME)
     driver.click_element(*InventoryPageLocators.BTN_BACK_TO_PRODUCT)
     assert link + endpoint == browser.current_url, "wrong url"
+
+
+
+
+
+
