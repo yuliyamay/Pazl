@@ -22,7 +22,6 @@ def test_footer_item_displayed(browser):
     driver.enter_user_name(regular_user)
     driver.enter_user_password(password)
     driver.click_login_button()
-
     driver.click_element(*InventoryPageLocators.BACKPACK_ADD_TO_CART_BUTTON)
     driver.click_element(*InventoryPageLocators.BIKE_LIGHT_ADD_TO_CART_BUTTON)
     driver.click_element(*InventoryPageLocators.BOLT_TSHIRT_ADD_TO_CART_BUTTON)
