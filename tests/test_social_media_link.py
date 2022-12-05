@@ -74,3 +74,13 @@ def test_about_link(browser):
     time.sleep(1)
     driver.click_element(*InventoryPageLocators.ABOUT_MENU_ITEM)
     driver.should_be_current_page("https://saucelabs.com/")
+
+
+@pytest.mark.TC_003_06_L
+def test_open_linkedin_page_L(browser):
+    driver = LoginPage(browser, link)
+    driver.login_success(browser)
+    driver.click_element(*InventoryPageLocators.LINKEDIN_IMAGE_LINK)
+    handle = browser.window_handles[1]
+    browser.switch_to.window(handle)
+    driver.should_be_current_page_piece("https://www.linkedin.com/")

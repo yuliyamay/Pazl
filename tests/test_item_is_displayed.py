@@ -3,6 +3,7 @@ import time
 import pytest
 from pages.inventory_page import InventoryPage
 from pages.login_page import LoginPage
+from pages.cart_page import CartPage
 from pages.locators import LoginPageLocators, CheckOutOverviewPage, CheckOutCompletePage
 from pages.locators import InventoryPageLocators
 from pages.locators import CartPageLocators
