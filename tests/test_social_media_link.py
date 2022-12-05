@@ -40,11 +40,11 @@ def test_open_twitter_page(browser):
     driver.enter_user_name(regular_user)
     driver.enter_user_password(password)
     driver.click_login_button()
-    parentHandle = browser.current_window_handle
+    parent_handle = browser.current_window_handle
     driver.click_element(*InventoryPageLocators.TWITTER_IMAGE_LINK)
     handles = browser.window_handles
     for handle in handles:
-        if handle not in parentHandle:
+        if handle not in parent_handle:
             browser.switch_to.window(handle)
     driver.should_be_current_page("https://twitter.com/saucelabs")
 
@@ -56,11 +56,12 @@ def test_open_linkedin_page(browser):
     driver.enter_user_name(regular_user)
     driver.enter_user_password(password)
     driver.click_login_button()
-    parentHandle = browser.current_window_handle
+    parent_handle = browser.current_window_handle
     driver.click_element(*InventoryPageLocators.LINKEDIN_IMAGE_LINK)
+    time.sleep(2)
     handles = browser.window_handles
     for handle in handles:
-        if handle not in parentHandle:
+        if handle not in parent_handle:
             browser.switch_to.window(handle)
     driver.should_be_current_page("https://www.linkedin.com/company/sauce-labs/")
 
