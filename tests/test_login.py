@@ -66,8 +66,6 @@ def test_fourth_item_back_to_product(browser):
     driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
 
 
-
-
 @pytest.mark.TC_001_02
 def test_login_with_invalid_password(browser):
     driver = LoginPage(browser, link)
@@ -100,7 +98,6 @@ def test_password_field_exists(browser):
     password_field = browser.find_element(By.CSS_SELECTOR, "#password")
     if password_field is not None:
         print("element is displayed")
-
 
 
 @pytest.mark.TC_001_24

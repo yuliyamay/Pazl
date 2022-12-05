@@ -31,6 +31,6 @@ class BasePage:
         assert link in self.browser.current_url, "wrong url"
 
     def should_be_current_page_piece(self, link):
-        print('\n**********************************', self.browser.current_url)
-        print('\n**********************************', link)
+        print("\n**********************************", self.browser.current_url)
+        print("\n**********************************", link)
         assert link in self.browser.current_url, "wrong url"

@@ -19,6 +19,6 @@ def make_list(items, numbers=False, item_name=None):
                 else:
                     lst_items.append(float(item.text.replace("$", "")))
         except:
-            print('Function needs some work on it.')
+            print("Function needs some work on it.")
 
     return lst_items
