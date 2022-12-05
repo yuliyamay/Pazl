@@ -63,7 +63,7 @@ def test_open_linkedin_page(browser):
     for handle in handles:
         if handle not in parent_handle:
             browser.switch_to.window(handle)
-    driver.should_be_current_page("https://www.linkedin.com/company/sauce-labs/")
+    driver.should_be_current_page("https://www.linkedin.com/")
 
 
 @pytest.mark.TC_002_05
@@ -83,4 +83,4 @@ def test_open_linkedin_page_L(browser):
     driver.click_element(*InventoryPageLocators.LINKEDIN_IMAGE_LINK)
     handle = browser.window_handles[1]
     browser.switch_to.window(handle)
-    driver.should_be_current_page_piece("https://www.linkedin.com/")
+    driver.should_be_current_page("https://www.linkedin.com/")
