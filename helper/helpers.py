@@ -11,7 +11,7 @@ def make_list(items, numbers=False, item_name=None):
     for item in items:
         try:
             if item_name:
-                if item.find(item_name):
+                if item.find(item_name) > -1:
                     return True
             else:
                 if not numbers:

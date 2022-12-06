@@ -44,7 +44,7 @@ def test_check_number_in_cart(browser):
         items += 1
         print(items)
 
-        amount = driver.getting_amount_of_items_in_cart()
+        amount = driver.get_amount_of_items_in_cart()
 
         assert int(amount) == items, "Wrong number in the cart. +"
 
@@ -58,7 +58,7 @@ def test_check_number_in_cart(browser):
         if items == 0:
             assert amount_displayed == False, "Number in cart is not 0. -"
         else:
-            amount = driver.getting_amount_of_items_in_cart()
+            amount = driver.get_amount_of_items_in_cart()
             assert int(amount) == items, "Wrong number in the cart. -"
 
 
