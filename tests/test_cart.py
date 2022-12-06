@@ -40,18 +40,23 @@ def test_verify_user_can_add_product_to_cart_L(browser):
 
     driver.item_in_cart(browser)
 
-    items_on_page = make_list(driver.find_items_in_cart(), item_name='Sauce Labs Backpack')
-    assert items_on_page, 'Item is not in the cart.'
+    items_on_page = make_list(
+        driver.find_items_in_cart(), item_name="Sauce Labs Backpack"
+    )
+    assert items_on_page, "Item is not in the cart."
 
     amount = driver.get_amount_of_items_in_cart()
-    assert int(amount) == 1, 'Number of products in the cart (the Primary Header) is not increased.'
+    assert (
+        int(amount) == 1
+    ), "Number of products in the cart (the Primary Header) is not increased."
 
     driver.click_element(*CartPageLocators.CONTINUE_SHOPPING_BUTTON)
-    driver.should_be_current_page('https://www.saucedemo.com/inventory.html')
+    driver.should_be_current_page("https://www.saucedemo.com/inventory.html")
 
-    add_btn_present = driver.element_is_present(*InventoryPageLocators.BACKPACK_ADD_TO_CART_BUTTON)
-    assert add_btn_present == False, 'Button has not turned into the “Remove” button after that.'
+    add_btn_present = driver.element_is_present(
+        *InventoryPageLocators.BACKPACK_ADD_TO_CART_BUTTON
+    )
+    assert (
+        add_btn_present == False
+    ), "Button has not turned into the “Remove” button after that."
     driver.element_is_present(*InventoryPageLocators.BACKPACK_REMOVE_BUTTON)
-
-
-

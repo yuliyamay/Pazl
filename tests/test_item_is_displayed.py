@@ -178,6 +178,7 @@ def test_header_displayed(browser):
     )
     assert header_checkout_complete_page, "Header is not displayed"
 
+
 @pytest.mark.TC_009_10
 def test_first_name_field_exists(browser):
     driver = LoginPage(browser, link)
@@ -246,4 +247,3 @@ def test_cancel_button_exists(browser):
         *CheckOutYourInformationPage.CONTINUE_BUTTON
     )
     assert continue_button, "Continue button is not displayed"
-
