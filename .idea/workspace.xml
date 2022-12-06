@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c634186-ca12-40c6-96ce-84457ca21174" name="Changes" comment="added folder 'tests'">
+    <list default="true" id="9c634186-ca12-40c6-96ce-84457ca21174" name="Changes" comment="test_open_linkedin_page_L">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_checkout_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_checkout_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_item_is_displayed.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_item_is_displayed.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/helpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/cart_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cart_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/inventory_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/inventory_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_cart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_inventory.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_inventory.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Yuliya" />
+        <entry key="$PROJECT_DIR$" value="laysan0" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,8 +49,8 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python tests.Python tests for test_social_media_link.test_open_facebook_page">
-    <configuration name="Python tests for test_checkout_page.test_user_redirected_to_checkout_page" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for test_cart.test_verify_user_can_add_product_to_cart_L">
+    <configuration name="Python tests for test_cart.test_verify_user_can_add_product_to_cart_1" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Pazl" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -58,11 +60,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_checkout_page.test_user_redirected_to_checkout_page&quot;" />
+      <option name="_new_target" value="&quot;test_cart.test_verify_user_can_add_product_to_cart_1&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_login.test_user_is_redirected_to_cart_page_from_check_your_info_page" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_cart.test_verify_user_can_add_product_to_cart_L" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Pazl" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -72,11 +74,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_login.test_user_is_redirected_to_cart_page_from_check_your_info_page&quot;" />
+      <option name="_new_target" value="&quot;test_cart.test_verify_user_can_add_product_to_cart_L&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_social_media_link.test_open_facebook_page" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_checkout_page.test_check_empty_fields" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Pazl" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -86,7 +88,21 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_social_media_link.test_open_facebook_page&quot;" />
+      <option name="_new_target" value="&quot;test_checkout_page.test_check_empty_fields&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_social_media_link.test_open_linkedin_page" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Pazl" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_social_media_link.test_open_linkedin_page&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -104,27 +120,13 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_social_media_link.test_open_twitter_page" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Pazl" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_social_media_link.test_open_twitter_page&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_social_media_link.test_open_facebook_page" />
-        <item itemvalue="Python tests.Python tests for test_social_media_link.test_open_twitter_page" />
+        <item itemvalue="Python tests.Python tests for test_cart.test_verify_user_can_add_product_to_cart_L" />
         <item itemvalue="Python tests.Python tests for test_social_media_link.test_open_linkedin_page_L" />
-        <item itemvalue="Python tests.Python tests for test_checkout_page.test_user_redirected_to_checkout_page" />
-        <item itemvalue="Python tests.Python tests for test_login.test_user_is_redirected_to_cart_page_from_check_your_info_page" />
+        <item itemvalue="Python tests.Python tests for test_social_media_link.test_open_linkedin_page" />
+        <item itemvalue="Python tests.Python tests for test_checkout_page.test_check_empty_fields" />
+        <item itemvalue="Python tests.Python tests for test_cart.test_verify_user_can_add_product_to_cart_1" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +216,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670092835138</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added folder 'tests'">
+      <created>1670206014379</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670206014379</updated>
+    </task>
+    <task id="LOCAL-00013" summary="modified tests">
+      <created>1670207591196</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670207591196</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,19 +238,32 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="laysan0" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added folder 'tests'" />
     <MESSAGE value="New tests" />
     <MESSAGE value="Added more tests" />
     <MESSAGE value="yml changes" />
     <MESSAGE value="commit" />
     <MESSAGE value="New test" />
-    <option name="LAST_COMMIT_MESSAGE" value="New test" />
+    <MESSAGE value="added folder 'tests'" />
+    <MESSAGE value="modified tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified tests" />
   </component>
 </project>
