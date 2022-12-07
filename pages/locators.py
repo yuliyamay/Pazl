@@ -297,4 +297,3 @@ class CheckOutCompletePage:
     YOUR_ORDER_DISPATCHED_LABEL = (By.CSS_SELECTOR, ".complete-text")
     BACK_HOME_BUTTON = (By.CSS_SELECTOR, "#back-to-products")
     HEADER_COMPLETE_PAGE = (By.CSS_SELECTOR, "#header_container")
-

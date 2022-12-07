@@ -7,8 +7,6 @@ from pages.locators import CartPageLocators
 from pages.locators import CheckOutYourInformationPage
 
 
-
-
 link = "https://www.saucedemo.com/"
 
 regular_user = "standard_user"
@@ -43,8 +41,8 @@ def test_error_first_name_is_required(browser):
     driver.click_element(*InventoryPageLocators.BACKPACK_ADD_TO_CART_BUTTON)
     driver.click_element(*InventoryPageLocators.SHOPPING_CART)
     driver.click_element(*CartPageLocators.CHECKOUT_BUTTON)
-    driver.keyboard_input(*CheckOutYourInformationPage.CHECKOUT_LAST_NAME, 'Vice')
-    driver.keyboard_input(*CheckOutYourInformationPage.ZIP_CODE_FIELD, '33400')
+    driver.keyboard_input(*CheckOutYourInformationPage.CHECKOUT_LAST_NAME, "Vice")
+    driver.keyboard_input(*CheckOutYourInformationPage.ZIP_CODE_FIELD, "33400")
     driver.click_element(*CheckOutYourInformationPage.CONTINUE_BUTTON)
     error_text = driver.error_first_name_is_required()
     assert error_text == "Error: First Name is required", "wrong warning text"

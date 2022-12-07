@@ -25,6 +25,8 @@ class InventoryPage(LoginPage):
         return self.find_elements(*CartPageLocators.ITEMS_IN_CART)
 
     def error_first_name_is_required(self):
-        element = self.browser.find_element(*CheckOutYourInformationPage.ERROR_FIRST_NAME)
+        element = self.browser.find_element(
+            *CheckOutYourInformationPage.ERROR_FIRST_NAME
+        )
         text = element.text
         return text

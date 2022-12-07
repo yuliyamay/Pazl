@@ -109,6 +109,7 @@ def test_login_invalid_username(browser):
     assert error_text == "Epic sadface: Username is required", "wrong warning text"
     time.sleep(5)
 
+
 @pytest.mark.TC_999_12
 def test_sixth_item_back_to_product(browser):
     driver = LoginPage(browser, link)

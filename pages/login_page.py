@@ -26,7 +26,9 @@ class LoginPage(BasePage):
         return text
 
     def getting_error_text_checkout_page(self):
-        element = self.browser.find_element(*CheckOutYourInformationPage.ERROR_FIRST_NAME)
+        element = self.browser.find_element(
+            *CheckOutYourInformationPage.ERROR_FIRST_NAME
+        )
         text = element.text
         return text
 
