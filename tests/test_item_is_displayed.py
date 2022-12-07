@@ -3,6 +3,7 @@ import time
 import pytest
 from pages.inventory_page import InventoryPage
 from pages.login_page import LoginPage
+from pages.cart_page import CartPage
 from pages.locators import LoginPageLocators, CheckOutOverviewPage, CheckOutCompletePage
 from pages.locators import InventoryPageLocators
 from pages.locators import CartPageLocators
@@ -22,7 +23,6 @@ def test_footer_item_displayed(browser):
     driver.enter_user_name(regular_user)
     driver.enter_user_password(password)
     driver.click_login_button()
-
     driver.click_element(*InventoryPageLocators.BACKPACK_ADD_TO_CART_BUTTON)
     driver.click_element(*InventoryPageLocators.BIKE_LIGHT_ADD_TO_CART_BUTTON)
     driver.click_element(*InventoryPageLocators.BOLT_TSHIRT_ADD_TO_CART_BUTTON)
@@ -177,3 +177,73 @@ def test_header_displayed(browser):
         *CheckOutCompletePage.HEADER_COMPLETE_PAGE
     )
     assert header_checkout_complete_page, "Header is not displayed"
+
+
+@pytest.mark.TC_009_10
+def test_first_name_field_exists(browser):
+    driver = LoginPage(browser, link)
+    driver.login_success(browser)
+    driver.click_element(*InventoryPageLocators.SHOPPING_CART)
+    driver.should_be_current_page("https://www.saucedemo.com/cart.html")
+    driver.click_element(*CartPageLocators.CHECKOUT_BUTTON)
+    driver.should_be_current_page("https://www.saucedemo.com/checkout-step-one.html")
+    first_name_field = driver.element_is_present(
+        *CheckOutYourInformationPage.CHECKOUT_FIRST_NAME
+    )
+    assert first_name_field, "First name field is not displayed"
+
+
+@pytest.mark.TC_009_11
+def test_last_name_field_exists(browser):
+    driver = LoginPage(browser, link)
+    driver.login_success(browser)
+    driver.click_element(*InventoryPageLocators.SHOPPING_CART)
+    driver.should_be_current_page("https://www.saucedemo.com/cart.html")
+    driver.click_element(*CartPageLocators.CHECKOUT_BUTTON)
+    driver.should_be_current_page("https://www.saucedemo.com/checkout-step-one.html")
+    last_name_field = driver.element_is_present(
+        *CheckOutYourInformationPage.CHECKOUT_LAST_NAME
+    )
+    assert last_name_field, "Last name field is not displayed"
+
+
+@pytest.mark.TC_009_12
+def test_zipcode_field_exists(browser):
+    driver = LoginPage(browser, link)
+    driver.login_success(browser)
+    driver.click_element(*InventoryPageLocators.SHOPPING_CART)
+    driver.should_be_current_page("https://www.saucedemo.com/cart.html")
+    driver.click_element(*CartPageLocators.CHECKOUT_BUTTON)
+    driver.should_be_current_page("https://www.saucedemo.com/checkout-step-one.html")
+    zipcode_field = driver.element_is_present(
+        *CheckOutYourInformationPage.ZIP_CODE_FIELD
+    )
+    assert zipcode_field, "Zipcode field field does not exist"
+
+
+@pytest.mark.TC_009_13
+def test_cancel_button_exists(browser):
+    driver = LoginPage(browser, link)
+    driver.login_success(browser)
+    driver.click_element(*InventoryPageLocators.SHOPPING_CART)
+    driver.should_be_current_page("https://www.saucedemo.com/cart.html")
+    driver.click_element(*CartPageLocators.CHECKOUT_BUTTON)
+    driver.should_be_current_page("https://www.saucedemo.com/checkout-step-one.html")
+    cancel_button = driver.element_is_present(
+        *CheckOutYourInformationPage.CANCEL_BUTTON
+    )
+    assert cancel_button, "Cancel button is not displayed"
+
+
+@pytest.mark.TC_009_14
+def test_cancel_button_exists(browser):
+    driver = LoginPage(browser, link)
+    driver.login_success(browser)
+    driver.click_element(*InventoryPageLocators.SHOPPING_CART)
+    driver.should_be_current_page("https://www.saucedemo.com/cart.html")
+    driver.click_element(*CartPageLocators.CHECKOUT_BUTTON)
+    driver.should_be_current_page("https://www.saucedemo.com/checkout-step-one.html")
+    continue_button = driver.element_is_present(
+        *CheckOutYourInformationPage.CONTINUE_BUTTON
+    )
+    assert continue_button, "Continue button is not displayed"

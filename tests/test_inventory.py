@@ -2,9 +2,11 @@ import time
 import pytest
 from pages.inventory_page import InventoryPage
 from pages.locators import InventoryPageLocators
+from pages.locators import CartPageLocators
 from pages.locators import FilterOptions
 from helper.helpers import count_items
 from helper.helpers import make_list
+from pages.cart_page import CartPage
 
 from pages.locators import CartPageLocators
 import logging
@@ -42,7 +44,7 @@ def test_check_number_in_cart(browser):
         items += 1
         print(items)
 
-        amount = driver.getting_amount_of_items_in_cart()
+        amount = driver.get_amount_of_items_in_cart()
 
         assert int(amount) == items, "Wrong number in the cart. +"
 
@@ -56,7 +58,7 @@ def test_check_number_in_cart(browser):
         if items == 0:
             assert amount_displayed == False, "Number in cart is not 0. -"
         else:
-            amount = driver.getting_amount_of_items_in_cart()
+            amount = driver.get_amount_of_items_in_cart()
             assert int(amount) == items, "Wrong number in the cart. -"
 
 
@@ -141,7 +143,9 @@ def test_verify_different_types_of_sorting(
     driver.login_success(browser)
 
     driver.click_element(*locator_filter)
-    items_on_page = make_list(browser.find_elements(*locator_items), convert_to_number)
+    items_on_page = make_list(
+        browser.find_elements(*locator_items), numbers=convert_to_number
+    )
     items_filtered = sorted(items_on_page, reverse=reverse_mark)
     assert items_on_page == items_filtered, "Items are not sorted."
 

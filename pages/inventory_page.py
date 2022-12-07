@@ -7,7 +7,7 @@ from pages.locators import CheckOutYourInformationPage
 
 
 class InventoryPage(LoginPage):
-    def getting_amount_of_items_in_cart(self):
+    def get_amount_of_items_in_cart(self):
         elem = self.browser.find_element(*InventoryPageLocators.SHOPPING_CART_BADGE)
         text = elem.text
         return text
