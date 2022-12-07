@@ -1,5 +1,6 @@
 from pages.base_page import BasePage
 from pages.locators import LoginPageLocators
+from pages.locators import CheckOutYourInformationPage
 
 link = "https://www.saucedemo.com/"
 endpoint_inventory = "inventory.html"
@@ -22,6 +23,11 @@ class LoginPage(BasePage):
     def getting_error_text(self):
         elem = self.browser.find_element(*LoginPageLocators.ERROR_WARNING)
         text = elem.text
+        return text
+
+    def getting_error_text_checkout_page(self):
+        element = self.browser.find_element(*CheckOutYourInformationPage.ERROR_FIRST_NAME)
+        text = element.text
         return text
 
     def login_success(self, browser):
