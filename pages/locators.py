@@ -160,6 +160,7 @@ class CartPageLocators:
     SECONDARY_HEADER_TITLE = (By.CSS_SELECTOR, ".title")
     CONTINUE_SHOPPING_BUTTON = (By.CSS_SELECTOR, "#continue-shopping")
     CHECKOUT_BUTTON = (By.CSS_SELECTOR, "#checkout")
+
     QTY_BOX = (By.CSS_SELECTOR, ".cart_quantity")
     NAME_BIKE_LIGHT_CART = (By.CSS_SELECTOR, "#item_0_title_link")
     NAME_BOLT_T_SHIRT_CART = (By.CSS_SELECTOR, "#item_1_title_link")
@@ -266,6 +267,7 @@ class CheckOutYourInformationPage:
     CANCEL_BUTTON = (By.CSS_SELECTOR, "#cancel")
     CONTINUE_BUTTON = (By.CSS_SELECTOR, "#continue")
     PRIMARY_HEADER = (By.CSS_SELECTOR, "#header_container")
+    ERROR_FIRST_NAME = (By.XPATH, "//h3[@data-test='error']")
 
 
 class CheckOutOverviewPage:

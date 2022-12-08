@@ -107,6 +107,7 @@ def test_login_invalid_username(browser):
     driver.click_login_button()
     error_text = driver.getting_error_text()
     assert error_text == "Epic sadface: Username is required", "wrong warning text"
+    time.sleep(5)
 
 
 @pytest.mark.TC_999_12

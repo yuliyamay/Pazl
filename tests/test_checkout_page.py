@@ -1,8 +1,11 @@
+import time
+
 import pytest
 from pages.inventory_page import InventoryPage
 from pages.locators import InventoryPageLocators
 from pages.locators import CartPageLocators
 from pages.locators import CheckOutYourInformationPage
+
 
 link = "https://www.saucedemo.com/"
 
@@ -29,3 +32,17 @@ def test_check_empty_fields(browser):
         *CheckOutYourInformationPage.ZIP_CODE_FIELD
     )
     assert zipcode_field, "Field is not empty"
+
+
+@pytest.mark.TC_009_09
+def test_error_first_name_is_required(browser):
+    driver = InventoryPage(browser, link)
+    driver.login_success(browser)
+    driver.click_element(*InventoryPageLocators.BACKPACK_ADD_TO_CART_BUTTON)
+    driver.click_element(*InventoryPageLocators.SHOPPING_CART)
+    driver.click_element(*CartPageLocators.CHECKOUT_BUTTON)
+    driver.keyboard_input(*CheckOutYourInformationPage.CHECKOUT_LAST_NAME, "Vice")
+    driver.keyboard_input(*CheckOutYourInformationPage.ZIP_CODE_FIELD, "33400")
+    driver.click_element(*CheckOutYourInformationPage.CONTINUE_BUTTON)
+    error_text = driver.error_first_name_is_required()
+    assert error_text == "Error: First Name is required", "wrong warning text"
