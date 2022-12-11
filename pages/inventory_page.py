@@ -30,3 +30,14 @@ class InventoryPage(LoginPage):
         )
         text = element.text
         return text
+
+    def error_last_name_is_required(self):
+        element = self.browser.find_element(*CheckOutYourInformationPage.ERROR_LAST_NAME)
+        text = element.text
+        return text
+
+    def error_zipcode_required(self):
+        element = self.browser.find_element(*CheckOutYourInformationPage.ERROR_POSTAL_ZIPCODE)
+        text = element.text
+        return text
+

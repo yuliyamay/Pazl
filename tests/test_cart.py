@@ -26,6 +26,7 @@ def test_item_data_displayed(browser):
     price_displayed = driver.element_is_present(*CartPageLocators.PRICE_ITEM_CART)
     assert price_displayed, "Price is not displayed."
     driver.click_element(*FirstItemPageLocators.REMOVE_BUTTON_FIRST_ITEM)
+    time.sleep(1)
 
 
 @pytest.mark.TC_007_02_L
@@ -60,3 +61,4 @@ def test_verify_user_can_add_product_to_cart_L(browser):
         add_btn_present == False
     ), "Button has not turned into the “Remove” button after that."
     driver.element_is_present(*InventoryPageLocators.BACKPACK_REMOVE_BUTTON)
+    time.sleep(1)
