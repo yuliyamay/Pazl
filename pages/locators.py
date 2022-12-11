@@ -268,8 +268,14 @@ class CheckOutYourInformationPage:
     CONTINUE_BUTTON = (By.CSS_SELECTOR, "#continue")
     PRIMARY_HEADER = (By.CSS_SELECTOR, "#header_container")
     ERROR_FIRST_NAME = (By.XPATH, "//h3[@data-test='error']")
-    ERROR_LAST_NAME = (By.XPATH, "/html/body/div[1]/div/div/div[2]/div/form/div[1]/div[4]/h3")
-    ERROR_POSTAL_ZIPCODE = (By.XPATH, "/html/body/div[1]/div/div/div[2]/div/form/div[1]/div[4]/h3")
+    ERROR_LAST_NAME = (
+        By.XPATH,
+        "/html/body/div[1]/div/div/div[2]/div/form/div[1]/div[4]/h3",
+    )
+    ERROR_POSTAL_ZIPCODE = (
+        By.XPATH,
+        "/html/body/div[1]/div/div/div[2]/div/form/div[1]/div[4]/h3",
+    )
 
 
 class CheckOutOverviewPage:
