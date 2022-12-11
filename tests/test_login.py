@@ -176,5 +176,5 @@ def test_verify_username_password_fields_start_login_page(browser):
     driver.open_main_page()
     username_field = driver.getting_field_value(*LoginPageLocators.LOGIN_USER)
     password_field = driver.getting_field_value(*LoginPageLocators.LOGIN_PASSWORD)
-    assert len(username_field) == 0, 'Field user name is not empty'
-    assert password_field == '', 'Field password is not empty'
+    assert len(username_field) == 0, "Field user name is not empty"
+    assert password_field == "", "Field password is not empty"

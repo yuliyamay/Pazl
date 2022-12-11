@@ -101,5 +101,4 @@ def test_last_name_error(browser):
     driver.input_zip_code()
     driver.click_button_continue()
     error_text = driver.error_last_name_is_required()
-    assert error_text == 'Error: Last Name is required'
-
+    assert error_text == "Error: Last Name is required"

@@ -44,4 +44,3 @@ class LoginPage(BasePage):
         element = self.browser.find_element(method, locator)
         text = element.text
         return text
-
