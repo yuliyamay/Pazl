@@ -39,3 +39,8 @@ class LoginPage(BasePage):
         self.click_login_button()
 
         assert link + endpoint_inventory == browser.current_url, "wrong url"
+
+    def getting_field_value(self, method, locator):
+        element = self.browser.find_element(method, locator)
+        text = element.text
+        return text

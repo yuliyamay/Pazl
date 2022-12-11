@@ -3,8 +3,10 @@ import time
 import pytest
 from pages.locators import InventoryPageLocators
 from pages.locators import CartPageLocators
+
 from pages.locators import CheckOutYourInformationPage
 from pages.inventory_page import InventoryPage
+from pages.checkout_page import CheckoutPage
 
 link = "https://www.saucedemo.com/"
 
@@ -86,3 +88,17 @@ def test_postal_error(browser):
     driver.click_element(*CheckOutYourInformationPage.CONTINUE_BUTTON)
     error_text = driver.error_zipcode_required()
     assert error_text == "Error: Postal Code is required", "wrong warning text"
+
+
+@pytest.mark.TC_009_08
+def test_last_name_error(browser):
+    driver = CheckoutPage(browser, link)
+    driver.login_success(browser)
+    driver.item_in_cart(browser)
+    driver.go_to_cart()
+    driver.check_out_your_information()
+    driver.input_first_name()
+    driver.input_zip_code()
+    driver.click_button_continue()
+    error_text = driver.error_last_name_is_required()
+    assert error_text == "Error: Last Name is required"
