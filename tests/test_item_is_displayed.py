@@ -271,5 +271,5 @@ def test_footer_displayed_navigation_flow_pages(browser):
     driver.click_button_continue()
     driver_footer.footer_is_displayed()
 
-    driver.click_finish()
+    driver.checkout()
     driver_footer.footer_is_displayed()
