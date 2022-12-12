@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c634186-ca12-40c6-96ce-84457ca21174" name="Changes" comment="TC_007_02">
+    <list default="true" id="9c634186-ca12-40c6-96ce-84457ca21174" name="Changes" comment="TC_001_18 and TC_009_08">
+      <change afterPath="$PROJECT_DIR$/pages/footer_section.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/cart_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cart_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/checkout_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/checkout_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_checkout_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_checkout_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_item_is_displayed.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_item_is_displayed.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670092835138</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="TC_001_18 and TC_009_08">
+      <created>1670781544779</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670781544779</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -238,6 +243,7 @@
     <MESSAGE value="yml changes" />
     <MESSAGE value="commit" />
     <MESSAGE value="New test" />
-    <option name="LAST_COMMIT_MESSAGE" value="New test" />
+    <MESSAGE value="TC_001_18 and TC_009_08" />
+    <option name="LAST_COMMIT_MESSAGE" value="TC_001_18 and TC_009_08" />
   </component>
 </project>

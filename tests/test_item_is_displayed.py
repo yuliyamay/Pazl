@@ -3,12 +3,14 @@ import time
 import pytest
 from pages.inventory_page import InventoryPage
 from pages.login_page import LoginPage
-from pages.cart_page import CartPage
 from pages.locators import LoginPageLocators, CheckOutOverviewPage, CheckOutCompletePage
 from pages.locators import InventoryPageLocators
 from pages.locators import CartPageLocators
 from pages.locators import CheckOutYourInformationPage
 from selenium.webdriver.common.by import By
+from pages.footer_section import FooterSection
+from pages.cart_page import CartPage
+from pages.checkout_page import CheckoutPage
 
 link = "https://www.saucedemo.com/"
 
@@ -247,3 +249,38 @@ def test_cancel_button_exists(browser):
         *CheckOutYourInformationPage.CONTINUE_BUTTON
     )
     assert continue_button, "Continue button is not displayed"
+
+
+@pytest.mark.TC_003_02
+def test_footer_displayed_navigation_flow_pages(browser):
+    driver_footer = FooterSection(browser, link)
+    driver_footer.login_success(browser)
+    driver_footer.footer_is_displayed()
+
+    driver = CartPage(browser, link)
+    driver.item_in_cart(browser)
+    driver_footer.footer_is_displayed()
+
+    driver = CheckoutPage(browser, link)
+    driver.check_out_your_information()
+    driver_footer.footer_is_displayed()
+
+    driver.input_first_name()
+    driver.input_last_name()
+    driver.input_zip_code()
+    driver.click_button_continue()
+    driver_footer.footer_is_displayed()
+
+    driver.click_finish()
+    driver_footer.footer_is_displayed()
+
+
+
+
+
+
+
+
+
+
+
