@@ -14,11 +14,12 @@ class CheckoutPage(CartPage):
         )
 
     def input_last_name(self):
-        self.keyboard_input(*CheckOutYourInformationPage.CHECKOUT_LAST_NAME, "LAST NAME")
+        self.keyboard_input(
+            *CheckOutYourInformationPage.CHECKOUT_LAST_NAME, "LAST NAME"
+        )
 
     def input_zip_code(self):
         self.keyboard_input(*CheckOutYourInformationPage.ZIP_CODE_FIELD, "POSTAL CODE")
 
     def click_button_continue(self):
         self.click_element(*CheckOutYourInformationPage.CONTINUE_BUTTON)
-
