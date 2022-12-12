@@ -273,14 +273,3 @@ def test_footer_displayed_navigation_flow_pages(browser):
 
     driver.click_finish()
     driver_footer.footer_is_displayed()
-
-
-
-
-
-
-
-
-
-
-
