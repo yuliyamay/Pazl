@@ -1,6 +1,7 @@
 from pages.cart_page import CartPage
 from pages.locators import CartPageLocators
 from pages.locators import CheckOutYourInformationPage
+from pages.locators import CheckOutOverviewPage
 
 
 class CheckoutPage(CartPage):
@@ -9,11 +10,13 @@ class CheckoutPage(CartPage):
 
     def input_first_name(self):
         self.keyboard_input(
-            *CheckOutYourInformationPage.CHECKOUT_FIRST_NAME, " FIRST NAME"
+            *CheckOutYourInformationPage.CHECKOUT_FIRST_NAME, "FIRST NAME"
         )
 
     def input_last_name(self):
-        pass
+        self.keyboard_input(
+            *CheckOutYourInformationPage.CHECKOUT_LAST_NAME, "LAST NAME"
+        )
 
     def input_zip_code(self):
         self.keyboard_input(*CheckOutYourInformationPage.ZIP_CODE_FIELD, "POSTAL CODE")
