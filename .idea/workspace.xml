@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c634186-ca12-40c6-96ce-84457ca21174" name="Changes" comment="TC_001_18 and TC_009_08">
+    <list default="true" id="9c634186-ca12-40c6-96ce-84457ca21174" name="Changes" comment="added folder 'tests'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/checkout_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/checkout_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_item_is_displayed.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_item_is_displayed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_checkout_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_checkout_page.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +25,13 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -46,8 +52,8 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python tests.Python tests for test_login.test_user_is_redirected_to_cart_page_from_check_your_info_page">
-    <configuration name="Python tests for test_item_is_displayed.test_logo2_displayed" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for test_checkout_page.test_postal_required">
+    <configuration name="Python tests for test_checkout_page.test_first_name_required" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Pazl" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -57,11 +63,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_item_is_displayed.test_logo2_displayed&quot;" />
+      <option name="_new_target" value="&quot;test_checkout_page.test_first_name_required&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_login.test_redirection_to_inventory_page" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_checkout_page.test_postal_required" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Pazl" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -71,7 +77,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_login.test_redirection_to_inventory_page&quot;" />
+      <option name="_new_target" value="&quot;test_checkout_page.test_postal_required&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -119,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_checkout_page.test_postal_required" />
+        <item itemvalue="Python tests.Python tests for test_checkout_page.test_first_name_required" />
         <item itemvalue="Python tests.Python tests for test_login.test_user_is_redirected_to_cart_page_from_check_your_info_page" />
         <item itemvalue="Python tests.Python tests for test_login.test_user_is_redirected_to_inventory_page_from_cart_page" />
         <item itemvalue="Python tests.Python tests for test_social_media_link.test_about_link" />
-        <item itemvalue="Python tests.Python tests for test_login.test_redirection_to_inventory_page" />
-        <item itemvalue="Python tests.Python tests for test_item_is_displayed.test_logo2_displayed" />
       </list>
     </recent_temporary>
   </component>
@@ -213,14 +219,7 @@
       <option name="project" value="LOCAL" />
       <updated>1670092835138</updated>
     </task>
-    <task id="LOCAL-00012" summary="TC_001_18 and TC_009_08">
-      <created>1670781544779</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1670781544779</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -241,7 +240,6 @@
     <MESSAGE value="yml changes" />
     <MESSAGE value="commit" />
     <MESSAGE value="New test" />
-    <MESSAGE value="TC_001_18 and TC_009_08" />
-    <option name="LAST_COMMIT_MESSAGE" value="TC_001_18 and TC_009_08" />
+    <option name="LAST_COMMIT_MESSAGE" value="New test" />
   </component>
 </project>

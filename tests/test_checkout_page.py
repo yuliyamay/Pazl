@@ -102,3 +102,28 @@ def test_last_name_error(browser):
     driver.click_button_continue()
     error_text = driver.error_last_name_is_required()
     assert error_text == "Error: Last Name is required"
+
+
+@pytest.mark.TC_009_06
+def test_first_name_required(browser):
+    driver = CheckoutPage(browser, link)
+    driver.login_success(browser)
+    driver.item_in_cart(browser)
+    driver.check_out_your_information()
+    driver.input_zip_code()
+    driver.click_button_continue()
+    error_text = driver.error_first_name_is_required()
+    assert error_text == "Error: First Name is required"
+
+
+@pytest.mark.TC_009_07
+def test_postal_required(browser):
+    driver = CheckoutPage(browser, link)
+    driver.login_success(browser)
+    driver.item_in_cart(browser)
+    driver.check_out_your_information()
+    driver.input_first_name()
+    driver.input_last_name()
+    driver.click_button_continue()
+    error_text = driver.error_zipcode_required()
+    assert error_text == "Error: Postal Code is required"
