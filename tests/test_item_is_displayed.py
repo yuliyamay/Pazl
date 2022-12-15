@@ -273,3 +273,19 @@ def test_footer_displayed_navigation_flow_pages(browser):
 
     driver.checkout()
     driver_footer.footer_is_displayed()
+
+
+@pytest.mark.TC_003_10
+def test_footer_displays_Checkout_Complete_page(browser):
+    driver_footer = FooterSection(browser, link)
+    driver_footer.login_success(browser)
+    driver = CartPage(browser, link)
+    driver.item_in_cart(browser)
+    driver = CheckoutPage(browser, link)
+    driver.check_out_your_information()
+    driver.input_first_name()
+    driver.input_last_name()
+    driver.input_zip_code()
+    driver.click_button_continue()
+    driver.checkout()
+    driver_footer.footer_is_displayed()
