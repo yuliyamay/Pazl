@@ -1,7 +1,7 @@
 import pytest
 from pages.login_page import LoginPage
-from pages.locators import InventoryPageLocators
-from pages.locators import LoginPageLocators
+from pages.cart_page import CartPage
+
 import time
 
 from pages.inventory_page import InventoryPage
@@ -84,3 +84,39 @@ def test_open_linkedin_page_L(browser):
     handle = browser.window_handles[1]
     browser.switch_to.window(handle)
     driver.should_be_current_page("https://www.linkedin.com/")
+
+
+
+@pytest.mark.TC_006_12
+def test_verify_user_redirected_to_LinkedIn_from_CartPage(browser):
+    driver = CartPage(browser, link)
+    driver.login_success(browser)
+    driver.go_to_cart()
+    driver.click_element(*InventoryPageLocators.LINKEDIN_IMAGE_LINK)
+    handle = browser.window_handles[1]
+    browser.switch_to.window(handle)
+    driver.should_be_current_page("https://www.linkedin.com/")
+
+
+@pytest.mark.TC_006_10
+def test_verify_user_redirected_to_Twitter_from_CartPage(browser):
+    driver = CartPage(browser, link)
+    driver.login_success(browser)
+    driver.go_to_cart()
+    driver.click_element(*InventoryPageLocators.TWITTER_IMAGE_LINK)
+    handle = browser.window_handles[1]
+    browser.switch_to.window(handle)
+    time.sleep(1)
+    driver.should_be_current_page("https://twitter.com/saucelabs")
+
+
+@pytest.mark.TC_006_11
+def test_verify_user_redirected_to_Facebook_from_CartPage(browser):
+    driver = CartPage(browser, link)
+    driver.login_success(browser)
+    driver.go_to_cart()
+    driver.click_element(*InventoryPageLocators.FACEBOOK_IMAGE_LINK)
+    handle = browser.window_handles[1]
+    browser.switch_to.window(handle)
+    time.sleep(1)
+    driver.should_be_current_page("https://www.facebook.com/saucelabs")
