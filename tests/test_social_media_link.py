@@ -86,7 +86,6 @@ def test_open_linkedin_page_L(browser):
     driver.should_be_current_page("https://www.linkedin.com/")
 
 
-
 @pytest.mark.TC_006_12
 def test_verify_user_redirected_to_LinkedIn_from_CartPage(browser):
     driver = CartPage(browser, link)
